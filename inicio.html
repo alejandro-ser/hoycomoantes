@@ -5,23 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/estilos.css">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Montserrat|Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/menu.css">
   <title>Hoy como Antes</title>
 </head>
 <body>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <h1>Lorem ipsum dolor sit amet</h1>
-          <p>Consectetur adipisicing elit. Sunt, quidem asperiores quibusdam impedit at et eveniet. Dolores vitae repudiandae dicta sed, architecto eaque libero, expedita cumque molestias officia sunt est.</p>
-          <a href="index.html" class="btn btn-outline-dark">Volver</a>
-        </div>
+
+  <div class="main-container">
+    <video autoplay loop muted poster="" id="video">
+      <source src="video/ratas_bajas.mp4" type="video/mp4">
+    </video>
+
+    <div class="content">
+
+      <h1 class="menu-title">Hoy como Antes</h1>
+
+      <span class="menu-trigger"><span></span></span>
+      <div class="menu-wrap">
+        <a href="video.html" class="menu-item"><div><p>Video</p></div></a>
+        <a href="referencias.html" class="menu-item"><div><p>Referencias</p></div></a>
+        <a href="eventos.html" class="menu-item"><div><p>Eventos</p></div></a>
+        <a href="contacto.html" class="menu-item"><div><p>Contacto</p></div></a>
+        <a href="index.html" class="menu-item"><div><p>Inicio</p></div></a>
       </div>
+
     </div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <button class="btn btn-link text-light btn-lg shadow-lg" id="btn-control" onclick="myFunction()">
+      <i class="fas fa-pause mx-2" id="btn-icon"></i>
+    </button>
+  </div>
+
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
   <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
+  <script src="js/main.js" charset="utf-8"></script>
 </body>
 </html>
