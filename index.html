@@ -6,42 +6,46 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:700|Montserrat:700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/estilos.css">
   <title>Hoy como Antes</title>
 </head>
 <body class="index">
-  <button class="btn-main btn-sound" type="button" name="button">
-    <span>ON</span>
-  </button>
+  <!-- Botones principales -->
   <button id="menu" class="btn-main btn-menu" type="button" name="button">
-    <span>ME</span>
-    <span>NÚ</span>
+    <span>ME <br> NÚ</span>
   </button>
+  <button class="btn-main btn-sound" type="button" name="button"></button>
 
+  <!-- Video de fondo -->
   <video autoplay loop muted poster="" id="video">
     <source src="video/ratas_bajas.mp4" type="video/mp4">
   </video>
 
+  <!-- Contenedor -->
   <div class="index__content container-fluid">
     <div class="row text-center align-items-center h-100">
       <div class="col-12">
-        <h1>PÓNGASE CÓMODO</h1>
-      </div>
-      <div class="col-12">
-        <a href="descripcion.html" class="btn-main">
-          <span>Hoy como Antes</span>
-        </a>
+        <div class="row">
+          <div class="col-12 mb-5">
+            <h1>PÓNGASE CÓMODO</h1>
+          </div>
+          <div class="col-12 pt-5">
+            <a href="descripcion.html" class="btn-main">
+              <span>Hoy como Antes</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Modal menú -->
-  <div id="modalMenu" class="menu">
+  <div id="modalMenu" class="menu animated">
     <button id="volver" class="btn-main btn-menu" type="button" name="button">
-      <span>VOL</span>
-      <span>VER</span>
+      <span>VOL <br> VER</span>
     </button>
-    <div class="menu__content container-fluid animated zoomIn">
+    <div class="menu__content container-fluid">
       <div class="row h-75">
         <div class="menu__content--right col-1"></div>
         <div class="col-10">
@@ -49,9 +53,10 @@
             <li><a href="descripcion.html">HOY COMO ANTES</a></li>
             <li><a href="pelicula.html">PELÍCULA</a></li>
             <li><a href="eventos.html">EVENTOS</a></li>
-            <li><a href="opinion.html">DÉJANOS TU OPINION</a></li>
+            <li><a href="contacto.html">DÉJANOS TU OPINION</a></li>
             <li><a href="referencias.html">REFERENCIAS</a></li>
             <li><a href="sobre_mi.html">AIXA ECHEVERRY GONZÁLEZ</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
             <li><a href="colaboradores.html">COLABORADORES</a></li>
           </ul>
         </div>

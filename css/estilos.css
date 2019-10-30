@@ -71,28 +71,35 @@ p {
 
 .btn-sound {
   position: absolute;
+  height: 42px;
+  width: 40px;
   bottom: 9vh;
   left: 0;
   border-radius: 0;
   z-index: 10;
+  background-image: url(../img/sound_on.png);
+  background-size: cover;
+}
+
+.btn-sound:hover {
+  background-image: url(../img/sound_off.png);
 }
 
 .btn-menu {
   position: absolute;
   top: 10vh;
   right: 0;
-  padding: 0.2rem .5rem 0rem;
+  height: 42px;
+  width: 40px;
   border-radius: 0;
+  line-height: 1rem;
+  padding: 0;
+  padding-top: 4px;
   z-index: 10;
 }
 
 .btn-menu span {
   display: block;
-}
-
-
-.menu .btn-menu {
-  padding: 0.2rem .5rem 0rem;
 }
 
 /*
@@ -151,6 +158,7 @@ p {
 .menu__list {
   text-align: center;
   list-style: none;
+  font-family: 'Josefin Slab', serif;
 }
 
 .menu__list li {
@@ -179,18 +187,6 @@ p {
    50% {
        opacity: 1;
    }
-}
-
-.zoomIn {
-   -webkit-animation-name: zoomIn;
-   animation-name: zoomIn;
-}
-
-.animated {
-   -webkit-animation-duration: .3s;
-   animation-duration: .3s;
-   -webkit-animation-fill-mode: both;
-   animation-fill-mode: both;
 }
 
 /*
@@ -250,7 +246,7 @@ p {
 }
 
 .description__content {
-  padding-right: 6rem;
+  padding-right: 5rem;
 }
 
 .description__content .btn-main {
@@ -283,13 +279,23 @@ p {
 .description__side .download {
   background-color: rgb(236,237,239);
   position: relative;
-  top: 60%;
+  top: 50%;
   padding: 30px 0;
   text-align: center;
 }
 
+.description__side a {
+  color: #000;
+}
+
+.description__side a:hover {
+  text-decoration: none;
+}
+
 .description__side h3 {
   font-weight: 700;
+  font-size: 1.4rem;
+  padding-top: 2rem;
 }
 
 
@@ -314,7 +320,7 @@ p {
 }
 
 .pelicula__info h2 {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
 }
 
 .pelicula__info p {

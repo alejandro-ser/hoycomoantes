@@ -25,13 +25,17 @@ var back = document.getElementById("volver");
 
 // When user clicks button, open Modal
 btnMenu.onclick = function() {
-   modal.style.display = "block";
-   };
+  modal.classList.remove('fadeOutRight');
+  modal.style.display = "block";
+  modal.classList.add('fadeInRight');
+};
 
 // When user clicks Close (x), close Modal
 back.onclick = function() {
-   modal.style.display = "none";
-   };
+  modal.classList.remove('fadeInRight');
+  modal.classList.add('fadeOutRight');
+  //modal.style.display = "none";
+};
 
 // When user clicks anywhere outside of the Modal, close Modal
  window.onclick = function(event) {
@@ -43,11 +47,13 @@ back.onclick = function() {
 
 // Pelicula
 function showInfo(id) {
-  info = document.getElementById(id)
+  info = document.getElementById(id);
+  info.classList.remove('fadeOutRight');
+  info.classList.add('fadeInRight');
   info.style.display = "block";
 }
 
 function hideInfo(id) {
-  info = document.getElementById(id)
+  info = document.getElementById(id);
   info.style.display = "none";
 }

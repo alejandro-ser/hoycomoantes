@@ -6,18 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:700|Montserrat:700|Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/estilos.css">
   <title>Hoy como Antes</title>
 </head>
 <body>
   <!-- Botones principales -->
-  <button class="btn-main btn-sound" type="button" name="button">
-    <span>ON</span>
-  </button>
   <button id="menu" class="btn-main btn-menu" type="button" name="button">
-    <span>ME</span>
-    <span>NÚ</span>
+    <span>ME <br> NÚ</span>
   </button>
+  <button class="btn-main btn-sound" type="button" name="button"></button>
   <!-- Contenedor -->
   <div class="description container h-100">
     <div class="row justify-content-center h-100">
@@ -30,30 +28,37 @@
           <a href="pelicula.html" class="btn-main"><span>PELÍCULA</span></a>
         </div>
       </div>
-      <div class="description__side col-3">
-        <div class="download">
-          <h3>Tesis Hoy como Antes <br> Descargame</h3>
+      <div class="col-4">
+        <div class="row justify-content-center h-100">
+          <div class="description__side col-7">
+            <div class="download">
+              <a target="_blank" href="downloads/hoy_como_antes_aixa_echeverry_gonzalez.pdf">
+                <img src="img/pdf_icon.png" alt="">
+                <h3>Tesis Hoy como Antes <br> Descargame</h3>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <!-- Modal menú -->
-  <div id="modalMenu" class="menu">
+  <div id="modalMenu" class="menu animated">
     <button id="volver" class="btn-main btn-menu" type="button" name="button">
-      <span>VOL</span>
-      <span>VER</span>
+      <span>VOL <br> VER</span>
     </button>
-    <div class="menu__content container-fluid animated zoomIn">
+    <div class="menu__content container-fluid">
       <div class="row h-75">
         <div class="menu__content--right col-1"></div>
         <div class="col-10">
           <ul class="menu__list">
-            <li><a href="index.html">HOY COMO ANTES</a></li>
+            <li><a href="descripcion.html">HOY COMO ANTES</a></li>
             <li><a href="pelicula.html">PELÍCULA</a></li>
             <li><a href="eventos.html">EVENTOS</a></li>
-            <li><a href="opinion.html">DÉJANOS TU OPINION</a></li>
+            <li><a href="contacto.html">DÉJANOS TU OPINION</a></li>
             <li><a href="referencias.html">REFERENCIAS</a></li>
             <li><a href="sobre_mi.html">AIXA ECHEVERRY GONZÁLEZ</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
             <li><a href="colaboradores.html">COLABORADORES</a></li>
           </ul>
         </div>
