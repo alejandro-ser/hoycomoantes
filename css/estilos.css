@@ -32,9 +32,9 @@ body{
   overflow: hidden;
 }
 
-h1,h2,h3 {
+h1,h2,h3,h4,h5,h6 {
   font-family: 'Josefin Slab', serif;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 p {
@@ -83,6 +83,7 @@ p {
 
 .btn-sound:hover {
   background-image: url(../img/sound_off.png);
+  background-color: transparent;
 }
 
 .btn-menu {
@@ -326,4 +327,37 @@ p {
 .pelicula__info p {
   font-size: 1rem;
   line-height: 1.2rem;
+}
+
+/* EVENTOS */
+.eventos {
+  padding-top: 6rem;
+}
+
+.eventos__item {
+  font-family: 'Josefin Slab', serif;
+}
+
+.eventos__item h1,
+.eventos__item h4,
+.eventos__item h6 {
+  line-height: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.eventos__item h4 {
+  line-height: 1.7rem;
+}
+
+.eventos__item h6 {
+  line-height: 1.1rem;
+}
+
+.eventos__item p {
+  background-color: #fff;
+  padding: .8rem;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  text-align: left;
 }
