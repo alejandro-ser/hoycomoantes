@@ -367,3 +367,33 @@ p {
 .colaboradores {
   padding-top: 5rem;
 }
+
+/*
+  CONTACTO
+  */
+
+.contacto__links ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contacto__links li {
+  background-color: #fff;
+  margin-top: 1.2rem;
+  padding: 1rem .8rem .5rem 1rem;
+  text-align: left;
+}
+
+.contacto__links li h1 {
+  line-height: 1.5rem;
+}
+
+.contacto__links li a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.contacto__links li a:hover {
+  color: #000;
+}
