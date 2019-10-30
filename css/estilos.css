@@ -2,85 +2,322 @@
   Hoy como antes
 */
 
-@import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Open+Sans|Montserrat&display=swap');
+/*
+  Fonts
+*/
 
 /* @font-face {
-  font-family: "Josefin Slab";
-  src: url("../fonts/Josefin_Slab/JosefinSlab-Bold.ttf") format("truetype");
+  font-family: 'Josefin Slab', serif;
+  src: url("/fonts/JosefinSlab-Bold.ttf");
+  src: url("/fonts/JosefinSlab-Bold.ttf") format('truetype');
 }
 
 @font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype");
-} */
-
-.main-container{
-  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  src: url("/fonnts/Montserrat-Bold.ttf");
+  src: url("/fonnts/Montserrat-Bold.ttf") format('truetype');
 }
 
-.main-container video{
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  src: url("/fonts/OpenSans-Regular.ttf");
+  src: url("/fonts/OpenSans-Regular.ttf") format('truetype');
+} */
+
+/* Basics */
+body{
   height: 100vh;
+  max-height: 100vh;
+  background-color: rgba(236,237,239);
+  overflow: hidden;
+}
+
+h1,h2,h3 {
+  font-family: 'Josefin Slab', serif;
+  font-weight: bolder;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+/* Buttons */
+
+.btn-main {
+  display: inline-block;
+  font-weight: 700;
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: 'Josefin Slab', serif;
+}
+
+.btn-main:hover {
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+}
+
+.btn-sound {
+  position: absolute;
+  bottom: 9vh;
+  left: 0;
+  border-radius: 0;
+  z-index: 10;
+}
+
+.btn-menu {
+  position: absolute;
+  top: 10vh;
+  right: 0;
+  padding: 0.2rem .5rem 0rem;
+  border-radius: 0;
+  z-index: 10;
+}
+
+.btn-menu span {
+  display: block;
+}
+
+
+.menu .btn-menu {
+  padding: 0.2rem .5rem 0rem;
+}
+
+/*
+  Modal menú
+ */
+
+.menu {
+   display: none;
+   position: fixed;
+   z-index: 20;
+   padding: 0;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+}
+
+.menu .menu__content {
+ background-color: rgb(236,237,239);
+ padding-top: 9%;
+}
+
+.pelicula .menu {
+ background-color: rgba(236,237,239,0.5);
+}
+
+.menu__content {
+   position: relative;
+   margin: auto;
+   padding: 0;
+   width: 100%;
+   height: 100%;
+   /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19); */
+   -webkit-animation-name: animatetop;
+   -webkit-animation-duration: 0.4s;
+   animation-name: animatetop;
+   animation-duration: 0.4s;
+}
+
+.menu__content--right,
+.menu__content--left {
+ background-size: cover;
+}
+
+.menu__content--right {
+ background-image: url(../img/menu_right.png);
+}
+
+.menu__content--left {
+ background-image: url(../img/menu_left.png);
+}
+
+/* Menu list */
+
+.menu__list {
+  text-align: center;
+  list-style: none;
+}
+
+.menu__list li {
+    padding: 12px 0;
+}
+
+.menu__list li a {
+  background-color: #fff;
+  color: #000;
+  padding: 5px 10px;
+}
+
+.menu__list li a:hover {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+@-webkit-keyframes zoomIn {
+   from {
+       opacity: 0;
+       -webkit-transform: scale3d(.3, .3, .3);
+       transform: scale3d(.3, .3, .3);
+   }
+
+   50% {
+       opacity: 1;
+   }
+}
+
+.zoomIn {
+   -webkit-animation-name: zoomIn;
+   animation-name: zoomIn;
+}
+
+.animated {
+   -webkit-animation-duration: .3s;
+   animation-duration: .3s;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+
+/*
+  INDEX
+  */
+
+.index video {
+  height: 100%;
   width: 100%;
   background-position: absolute;
-  z-index: 10;
   object-fit: cover;
 }
 
-.main-container .content {
-  *background: rgba(238,240,241,0.15);
-  color: #fff;
+.index__content {
   height: 100%;
-  width: 100%;
-  z-index: 20;
   position: absolute;
   top: 0;
-  left: 0;
 }
 
-.main-container .content h2 {
-  font-family: 'Josefin Slab', serif;  
-  font-size: 65px;
-  font-weight: 600;
-  text-shadow: 0px 0px 6px #000;
-}
-
-.main-container .content h1 {
+.index__content h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 65px;
-  font-weight: 800;
-  *text-shadow: 0px 0px 6px #000;
+  color: #fff;
 }
 
-.main-container .content a {
+.index__content .btn-main {
   font-family: 'Open Sans', sans-serif;
   font-size: 26px;
-  border-width: 3px;
+  border-width: 1px;
+  border-color: #fff;
+  border-radius: 4px;
   background-color: rgba(248, 249, 250, 0.3);
+  color: #fff;
 }
 
-.main-container .content a:hover {
+.index__content .btn-main:hover {
   background-color: rgba(10, 10, 10, 0.5);
+}
+
+.index__content .btn-main i {
   color: #f8f9fa;
 }
 
-.main-container .content a i {
-  color: #f8f9fa;
-}
-
-.main-container .content a span {
+.index__content .btn-main span {
   font-family: 'Josefin Slab', serif;
-  font-weight: 600;
+  font-weight: 700;
   padding: 0 60px;
-  *text-shadow: 0px 0px 6px #000;
 }
 
-.content-intro {
-  height: 100vh;
+/*
+  DESCRIPCIÓN
+*/
+
+.description .description__title {
+  font-size: 4rem;
+  text-align: center;
 }
 
-#control {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  z-index: 20;
+.description__content {
+  padding-right: 6rem;
+}
+
+.description__content .btn-main {
+  font-size: 1.1rem;
+  border-width: 1px;
+  border-color: #000;
+  border-radius: 4px;
+  background-color: rgb(236,237,239);
+  color: #000;
+}
+
+.description__content .btn-main span {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.description__content .btn-main:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
+.description__side {
+  background-image: url(../img/descripcion_side_top.jpg);
+  background-size: cover;
+  background-repeat: repeat-y;
+  padding: 0;
+}
+
+.description__side .download {
+  background-color: rgb(236,237,239);
+  position: relative;
+  top: 60%;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.description__side h3 {
+  font-weight: 700;
+}
+
+
+/*
+  PELICULA
+ */
+
+.pelicula .menu__list {
+ text-align: left;
+ padding-left: 0;
+}
+
+.pelicula .menu__list li {
+ padding: 6px 0;
+}
+
+.pelicula__info {
+  padding: 15px;
+  background-color: #fff;
+  text-align: center;
+  display: none;
+}
+
+.pelicula__info h2 {
+  font-size: 1.8rem;
+}
+
+.pelicula__info p {
+  font-size: 1rem;
+  line-height: 1.2rem;
 }

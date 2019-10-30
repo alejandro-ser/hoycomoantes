@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:700|Montserrat:700|Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Hoy como Antes</title>
+    <!-- <link rel="stylesheet" href="https://rawgit.com/yandongCoder/circular-menu/master/dist/css/circular-menu.css">
+    <style media="screen">
+    .tips {
+      font-size: 40px;
+      color: #999;
+      position: fixed;
+      top: 50%;
+      left: 30%;
+      }
+
+      .menu1 {
+      left: 50%;
+      top: 50%;
+      }
+
+      .my-icon {
+      background: url("https://rawgit.com/yandongCoder/circular-menu/master/examples/circular-menu.png");
+      }
+
+      .icon1 {
+      background-position: 0 0;
+      }
+
+      .icon2 {
+      background-position: 0 -56px;
+      }
+
+      .icon3 {
+      background-position: 0 -116px;
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- Botones principales -->
+    <button id="menu" class="btn-main btn-menu" type="button" name="button">
+      <span>ME</span>
+      <span>NÚ</span>
+    </button>
+    <!-- Contenedor -->
+    <div class="pelicula container-fluid h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="pelicula__content col-2">
+          <ul class="menu__list">
+            <li><a href="#">ON</a></li>
+            <li><a onmouseover="showInfo('de_dias')" onmouseout="hideInfo('de_dias')" href="#">DE DÍAS</a></li>
+            <li><a onmouseover="showInfo('a_nadie')" onmouseout="hideInfo('a_nadie')" href="#">A NADIE</a></li>
+            <li><a onmouseover="showInfo('por_favor')" onmouseout="hideInfo('por_favor')" href="#">POR FAVOR</a></li>
+            <li><a onmouseover="showInfo('aman_ama')" onmouseout="hideInfo('aman_ama')" href="#">AMAN AMA</a></li>
+            <li><a onmouseover="showInfo('si')" onmouseout="hideInfo('si')" href="#">¿SÍ?</a></li>
+            <li><a onmouseover="showInfo('cosas_casos')" onmouseout="hideInfo('cosas_casos')" href="#">COSAS CASOS</a></li>
+            <li><a onmouseover="showInfo('dos_disparos')" onmouseout="hideInfo('dos_disparos')" href="#">DOS DISPAROS</a></li>
+            <li><a onmouseover="showInfo('hoy_como_antes')" onmouseout="hideInfo('hoy_como_antes')" href="#">HOY COMO ANTES</a></li>
+            <li><a onmouseover="showInfo('no')" onmouseout="hideInfo('no')" href="#">NO</a></li>
+            <li><a onmouseover="showInfo('no_me_acuerdo')" onmouseout="hideInfo('no_me_acuerdo')" href="#">NO ME ACUERDO</a></li>
+          </ul>
+        </div>
+        <div class="col-7">
+          <span>Comming soon..</span>
+        </div>
+        <div class="col-3 pr-0">
+          <div id="de_dias" class="pelicula__info h-50">
+            <h2>DE DÍAS</h2>
+            <p><i>De días</i> se construye de la voz que nombra diferentes tiempos donde los cambios de espacio evidencian el movimiento y los recorridos que se van a dar en el transcurso de la narración.</p>
+          </div>
+          <div id="a_nadie" class="pelicula__info h-50">
+            <h2>A NADIE</h2>
+            <p><i>A nadie</i> deja entrever la naturaleza secreta del material desde la voz, una pieza que es compuesta por fracciones del diario íntimo (grabado) e insinúa la relación de aparente confidencialidad que se tiene con el dispositivo.</p>
+          </div>
+          <div id="por_favor" class="pelicula__info h-50">
+            <h2>POR FAVOR</h2>
+            <p><i>Por Favor</i> da la bienvenida a los diferentes recorridos que se harán a lo largo de la película. El sonido robótico da la instrucción iniciando  los viajes temporales de los capítulos.</p>
+          </div>
+          <div id="aman_ama" class="pelicula__info h-50">
+            <h2>AMAN AMA</h2>
+            <p><i>Aman Ama</i> se compone como una oración en formato de mantra, la relación sonora con la palabra Amor, da sentido a lo que considero la esencia de la espiritualidad, concepto abordado en esta pieza.</p>
+          </div>
+          <div id="si" class="pelicula__info h-50">
+            <h2>¿SI?</h2>
+            <p><i>¿Si?</i> suscitan preguntas sobre los vínculos espirituales provocados por la soledad, dos posiciones que se contraponen desde el sonido y la imagen.</p>
+          </div>
+          <div id="cosas_casos" class="pelicula__info h-50">
+            <h2>COSAS CASOS</h2>
+            <p><i>Cosas Casos</i> tienen como intención reforzar la idea de la soledad y la espiritualidad a partir del vínculo sonido-imagen. Todo esto se manifiesta en los gestos de dos mujeres mayores y lo que su edad implica en cuanto a modismos y sabiduría.</p>
+          </div>
+          <div id="dos_disparos" class="pelicula__info h-50">
+            <h2>DOS DISPAROS</h2>
+            <p><i>Dos Disparos</i> se centra en dos acontecimientos: uno, la imposibilidad de cerrar los oídos; y dos, la historia de un asesinato contada por un niño.</p>
+          </div>
+          <div id="hoy_como_antes" class="pelicula__info h-50">
+            <h2>HOY COMO ANTES</h2>
+            <p><i>Hoy como antes</i> cuestiona el paso del tiempo y las formas en las que éste se refleja en el cuerpo. Las texturas sonoras de esta pieza pretenden crear tensiones entre el espacio interior y el exterior.</p>
+          </div>
+          <div id="no" class="pelicula__info h-50">
+            <h2>NO</h2>
+            <p><i>No</i> incorpora el dispositivo (cámara y grabadora) al cuerpo físico, para así dar una idea de mimesis entre el cuerpo humano y el cuerpo de la máquina.</p>
+          </div>
+          <div id="no_me_acuerdo" class="pelicula__info h-50">
+            <h2>NO ME ACUERDO</h2>
+            <p><i>No me acuerdo</i> es una pieza que trabaja desde la autonomía del dispositivo, cuestionando el manejo y la vida de la herramienta.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal menú -->
+    <div id="modalMenu" class="menu">
+      <button id="volver" class="btn-main btn-menu" type="button" name="button">
+        <span>VOL</span>
+        <span>VER</span>
+      </button>
+      <div class="menu__content container-fluid animated zoomIn">
+        <div class="row h-75">
+          <div class="menu__content--right col-1"></div>
+          <div class="col-10">
+            <ul class="menu__list">
+              <li><a href="index.html">HOY COMO ANTES</a></li>
+              <li><a href="pelicula.html">PELÍCULA</a></li>
+              <li><a href="eventos.html">EVENTOS</a></li>
+              <li><a href="opinion.html">DÉJANOS TU OPINION</a></li>
+              <li><a href="referencias.html">REFERENCIAS</a></li>
+              <li><a href="sobre_mi.html">AIXA ECHEVERRY GONZÁLEZ</a></li>
+              <li><a href="colaboradores.html">COLABORADORES</a></li>
+            </ul>
+          </div>
+          <div class="menu__content--left col-1"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <script src="js/main.js" charset="utf-8"></script>
+
+
+
+
+    <!-- <div id="menu1" class="menu1 circular-menu s-S1 s-S2 s-S3 s-S4 s-S5 opened-nav" style="width: 300px; height: 300px; margin-top: -150px; margin-left: -150px; display: block; left: 393px; top: 249px;">
+
+      <ul>
+        <li style="width: 150px; height: 150px; transform: rotate(-90deg) skew(45deg);">
+          <a href="http://github.com" target="_blank" style="width: 300px; height: 300px; right: -150px; bottom: -150px; transform: skew(-45deg) rotate(-67.5deg) scale(1);" class="s-S6 s-S7">
+            <div class="horizontal" style="transform: rotate(157.5deg);">
+              <span class="fa fa-github cm-icon" style="width: 38.4265px; height: 38.4265px; font-size: 38.4265px; margin-top: 2.82355px;" aria-hidden="true"></span>
+              <span class="text" style="margin-top: 3px; top: -3px;">GitHub</span>
+            </div>
+          </a>
+        </li>
+        <li style="width: 150px; height: 150px; transform: rotate(-45deg) skew(45deg);">
+          <a style="width: 300px; height: 300px; right: -150px; bottom: -150px; transform: skew(-45deg) rotate(-67.5deg) scale(1);" class="s-S8 s-S9">
+            <div class="horizontal" style="transform: rotate(112.5deg);">
+              <span class="fa fa-gitlab cm-icon" style="color: rgb(64, 120, 192); width: 38.4265px; height: 38.4265px; font-size: 38.4265px; margin-top: 2.82355px;" aria-hidden="true"></span>
+              <span class="text" style="margin-top: 3px; top: -3px;">GitLab</span>
+            </div>
+          </a>
+        </li>
+        <li style="width: 150px; height: 150px; transform: rotate(0deg) skew(45deg);">
+          <a style="width: 300px; height: 300px; right: -150px; bottom: -150px; transform: skew(-45deg) rotate(-67.5deg) scale(1);" class="s-S10 s-S11">
+            <div class="horizontal" style="transform: rotate(67.5deg);">
+              <span class="my-icon icon1 cm-icon" style="width: 38.4265px; height: 38.4265px; font-size: 38.4265px; margin-top: 2.82355px;"></span>
+              <span class="text" style="margin-top: 3px; top: -3px;">subMenu</span>
+            </div>
+          </a>
+        </li>
+        <li style="width: 150px; height: 150px; transform: rotate(45deg) skew(45deg);">
+          <a style="width: 300px; height: 300px; right: -150px; bottom: -150px; transform: skew(-45deg) rotate(-67.5deg) scale(1);" class="s-S41 s-S42">
+            <div class="horizontal" style="transform: rotate(22.5deg);">
+              <span class="my-icon icon2 cm-icon" style="width: 38.4265px; height: 38.4265px; font-size: 38.4265px; margin-top: 2.82355px;"></span>
+              <span class="text" style="margin-top: 3px; top: -3px;">subMenu</span>
+            </div>
+          </a>
+        </li>
+        <li style="width: 150px; height: 150px; transform: rotate(90deg) skew(45deg);">
+          <a style="width: 300px; height: 300px; right: -150px; bottom: -150px; transform: skew(-45deg) rotate(-67.5deg) scale(1);" class="s-S43 s-S44">
+            <div class="horizontal" style="transform: rotate(-22.5deg);">
+              <span class="my-icon icon3 cm-icon" style="width: 38.4265px; height: 38.4265px; font-size: 38.4265px; margin-top: 2.82355px;"></span>
+              <span class="text" style="margin-top: 3px; top: -3px;">click</span>
+            </div>
+          </a>
+        </li>
+        <li style="width: 150px; height: 150px; transform: rotate(135deg) skew(45deg);">
+          <a href="#someHash" style="width: 300px; height: 300px; right: -150px; bottom: -150px; transform: skew(-45deg) rotate(-67.5deg) scale(1);" class="s-S45 s-S46">
+            <div class="horizontal" style="transform: rotate(-67.5deg);">
+              <span class="text" style="margin-top: 22.4383px; top: 0px;">hash-href</span>
+            </div>
+          </a>
+        </li>
+        <li style="width: 150px; height: 150px; transform: rotate(180deg) skew(45deg);">
+          <a style="width: 300px; height: 300px; right: -150px; bottom: -150px; transform: skew(-45deg) rotate(-67.5deg) scale(1);" class="s-S47 s-S48">
+            <div class="horizontal" style="transform: rotate(-112.5deg);">
+              <span class="text" style="margin-top: 22.4383px; top: 0px;">clickMe!</span>
+            </div>
+          </a>
+        </li>
+        <li style="width: 150px; height: 150px; transform: rotate(225deg) skew(45deg);">
+          <a style="width: 300px; height: 300px; right: -150px; bottom: -150px; transform: skew(-45deg) rotate(-67.5deg) scale(1);" class="disabled s-S49 s-S50">
+            <div class="horizontal" style="transform: rotate(-157.5deg);">
+              <span class="text" style="margin-top: 22.4383px; top: 0px;">disabled</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div> -->
+  </body>
+</html>

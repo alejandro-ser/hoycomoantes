@@ -4,52 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:700|Montserrat:700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilos.css">
   <title>Hoy como Antes</title>
 </head>
-<body>
-  <div class="main-container">
-    <video autoplay loop muted poster="" id="video">
-      <source src="video/ratas_bajas.mp4" type="video/mp4">
-    </video>
+<body class="index">
+  <button class="btn-main btn-sound" type="button" name="button">
+    <span>ON</span>
+  </button>
+  <button id="menu" class="btn-main btn-menu" type="button" name="button">
+    <span>ME</span>
+    <span>NÚ</span>
+  </button>
 
-    <div class="content">
-      <div class="container">
-        <div class="content-intro row text-center align-items-center">
-          <div class="col-12">
-            <h1>Pongase cómodo</h1>
-          </div>
-          <div class="col-12">
-            <a href="inicio.html" class="btn btn-outline-light">
-              <span>Hoy como Antes</span>
-            </a>
-          </div>
-        </div>
+  <video autoplay loop muted poster="" id="video">
+    <source src="video/ratas_bajas.mp4" type="video/mp4">
+  </video>
+
+  <div class="index__content container-fluid">
+    <div class="row text-center align-items-center h-100">
+      <div class="col-12">
+        <h1>PÓNGASE CÓMODO</h1>
+      </div>
+      <div class="col-12">
+        <a href="descripcion.html" class="btn-main">
+          <span>Hoy como Antes</span>
+        </a>
       </div>
     </div>
-
-    <button class="btn btn-link text-light btn-lg shadow-lg" id="control" onclick="myFunction()">
-      <i class="fas fa-pause mx-2" id="btn-icon"></i>
-    </button>
   </div>
 
-  <script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
-  <script type="text/javascript">
-    var video = document.getElementById("video");
-    var btn = document.getElementById("control");
+  <!-- Modal menú -->
+  <div id="modalMenu" class="menu">
+    <button id="volver" class="btn-main btn-menu" type="button" name="button">
+      <span>VOL</span>
+      <span>VER</span>
+    </button>
+    <div class="menu__content container-fluid animated zoomIn">
+      <div class="row h-75">
+        <div class="menu__content--right col-1"></div>
+        <div class="col-10">
+          <ul class="menu__list">
+            <li><a href="descripcion.html">HOY COMO ANTES</a></li>
+            <li><a href="pelicula.html">PELÍCULA</a></li>
+            <li><a href="eventos.html">EVENTOS</a></li>
+            <li><a href="opinion.html">DÉJANOS TU OPINION</a></li>
+            <li><a href="referencias.html">REFERENCIAS</a></li>
+            <li><a href="sobre_mi.html">AIXA ECHEVERRY GONZÁLEZ</a></li>
+            <li><a href="colaboradores.html">COLABORADORES</a></li>
+          </ul>
+        </div>
+        <div class="menu__content--left col-1"></div>
+      </div>
+    </div>
+  </div>
 
-    function myFunction() {
-      if (video.paused) {
-        video.play();
-        document.getElementById("btn-icon").classList.remove('fa-play');
-        document.getElementById("btn-icon").classList.add('fa-pause');
-      } else {
-        video.pause();
-        document.getElementById("btn-icon").classList.remove('fa-pause');
-        document.getElementById("btn-icon").classList.add('fa-play');
-      }
-    }
-  </script>
+  <!-- Scripts -->
+  <script src="js/main.js" charset="utf-8"></script>
 </body>
 </html>
