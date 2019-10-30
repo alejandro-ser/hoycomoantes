@@ -329,6 +329,30 @@ p {
   line-height: 1.2rem;
 }
 
+.btn-pelicula {
+  height: 42px;
+  width: 40px;
+  border-radius: 0;
+  background-image: url(../img/sound_on.png);
+  background-size: cover;
+
+  display: inline-block;
+  font-weight: 700;
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+}
+
+.btn-pelicula:hover {
+  background-image: url(../img/sound_off.png);
+}
+
 /* EVENTOS */
 .eventos {
   padding-top: 6rem;
