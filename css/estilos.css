@@ -108,6 +108,23 @@ p {
   display: block;
 }
 
+.btn-close {
+  display: inline-block;
+  font-weight: 700;
+  color: rgb(236,237,237);
+  background-color: transparent;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  font-size: 1.2rem;
+  line-height: 0;
+  padding: 1rem;
+}
+
 /*
   Modal menú
  */
@@ -157,6 +174,22 @@ p {
 
 .menu__content--left {
  background-image: url(../img/menu_left.png);
+}
+
+/*
+  Modal reproductor
+ */
+
+.modal-video {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-video__content {
+
+}
+
+.modal-video__content video {
+  *height: calc(100/30%);
 }
 
 /* Menu list */
@@ -369,6 +402,10 @@ p {
 
 .btn-pelicula:hover {
   background-image: url(../img/sound_off.png);
+}
+
+.modal-video__footer h3 {
+  color: #fff;
 }
 
 /* EVENTOS */

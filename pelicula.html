@@ -46,6 +46,7 @@
     <button id="menu" class="btn-main btn-menu" type="button" name="button">
       <span>ME <br> NÚ</span>
     </button>
+
     <!-- <button class="btn-main btn-sound" type="button" name="button"></button> -->
 
     <!-- Contenedor -->
@@ -76,48 +77,30 @@
             </li> -->
             <li><button type="button" class="btn-main deDias"
                         onclick="setChapter('deDias')">DE DÍAS</button></li>
-                        <!-- onmouseover="showInfo('de_dias')"
-                        onmouseout="hideInfo('de_dias')" -->
             <li><button type="button" class="btn-main aNadie"
                         onclick="setChapter('aNadie')">A NADIE</button></li>
-                        <!-- onmouseover="showInfo('a_nadie')"
-                        onmouseout="hideInfo('a_nadie')" -->
             <li><button type="button" class="btn-main porFavor"
                         onclick="setChapter('porFavor')">POR FAVOR</button></li>
-                        <!-- onmouseover="showInfo('por_favor')"
-                        onmouseout="hideInfo('por_favor')" -->
             <li><button type="button" class="btn-main amanAma"
                         onclick="setChapter('amanAma')">AMAN AMA</button></li>
-                        <!-- onmouseover="showInfo('aman_ama')"
-                        onmouseout="hideInfo('aman_ama')" -->
             <li><button type="button" class="btn-main si"
                         onclick="setChapter('si')">¿SÍ?</button></li>
-                        <!-- onmouseover="showInfo('si')"
-                        onmouseout="hideInfo('si')" -->
             <li><button type="button" class="btn-main cosasCasos"
                         onclick="setChapter('cosasCasos')">COSAS CASOS</button></li>
-                        <!-- onmouseover="showInfo('cosas_casos')"
-                        onmouseout="hideInfo('cosas_casos')" -->
             <li><button type="button" class="btn-main dosDisparos"
                         onclick="setChapter('dosDisparos')">DOS DISPAROS</button></li>
-                        <!-- onmouseover="showInfo('dos_disparos')"
-                        onmouseout="hideInfo('dos_disparos')" -->
             <li><button type="button" class="btn-main hoyComoAntes"
                         onclick="setChapter('hoyComoAntes')">HOY COMO ANTES</button></li>
-                        <!-- onmouseover="showInfo('hoy_como_antes')"
-                        onmouseout="hideInfo('hoy_como_antes')" -->
             <li><button type="button" class="btn-main no"
                         onclick="setChapter('no')">NO</button></li>
-                        <!-- onmouseover="showInfo('no')"
-                        onmouseout="hideInfo('no')" -->
             <li><button type="button" class="btn-main noMeAcuerdo"
                         onclick="setChapter('noMeAcuerdo')">NO ME ACUERDO</button></li>
-                        <!-- onmouseover="showInfo('no_me_acuerdo')"
-                        onmouseout="hideInfo('no_me_acuerdo')" -->
           </ul>
         </div>
-        <div class="col-7">
-          <span>Comming soon..</span>
+        <div class="col-7 justify-self-center">
+          <button id="triggerVideo" class="btn btn-dark ml-5" type="button" name="button">
+            Película
+          </button>
         </div>
         <div class="col-3 pr-0">
           <div id="deDias" class="pelicula__info animated h-50">
@@ -165,27 +148,23 @@
     </div>
 
     <!-- Modal menú -->
-    <div id="modalVideo" class="menu">
-      <button id="close" class="btn-close" type="button" name="button">
-        <span>X</span>
-      </button>
-      <div class="menu__content container-fluid">
-        <div class="row h-75">
-          <div class="menu__content--right col-1"></div>
-          <div class="col-10">
-            <ul class="menu__list">
-              <li><a href="descripcion.html">HOY COMO ANTES</a></li>
-              <li><a href="pelicula.html">PELÍCULA</a></li>
-              <li><a href="eventos.html">EVENTOS</a></li>
-              <li><a href="contacto.html">DÉJANOS TU OPINIÓN</a></li>
-              <li><a href="referencias.html">REFERENCIAS</a></li>
-              <li><a href="sobre_mi.html">AIXA ECHEVERRY GONZÁLEZ</a></li>
-              <li><a href="contacto.html">CONTACTO</a></li>
-              <li><a href="colaboradores.html">COLABORADORES</a></li>
-              <li><a href="index.html">INTRO</a></li>
-            </ul>
+    <div id="modalVideo" class="menu modal-video animated">
+      <div class="modal-video__content container h-100">
+        <div class="row justify-content-center h-100">
+          <div class="col-9 align-self-center text-right">
+            <div class="modal-video__header">
+              <button id="close" class="btn-close" type="button" name="button">
+                <span>X</span>
+              </button>
+            </div>
+            <!-- Video de fondo -->
+            <video autoplay controls id="video" class="img-fluid my-3">
+              <source src="video/1_de_dias.mp4" type="video/mp4">
+            </video>
+            <div class="modal-video__footer">
+              <h3 class="text-uppercase">de días</h3>
+            </div>
           </div>
-          <div class="menu__content--left col-1"></div>
         </div>
       </div>
     </div>
@@ -219,9 +198,36 @@
     <script src="js/main.js" charset="utf-8"></script>
     <script type="text/javascript">
       /*
+        Modal Video
+      */
+      var modalVideo = document.getElementById('modalVideo');
+      var triggerVideo = document.getElementById("triggerVideo");
+      var close = document.getElementById("close");
+
+      // When user clicks button, open Modal
+      triggerVideo.onclick = function() {
+        modalVideo.classList.remove('fadeOut');
+        modalVideo.style.display = "block";
+        modalVideo.classList.add('fadeIn');
+      };
+
+      // When user clicks Close (x), close Modal
+      close.onclick = function() {
+        modalVideo.classList.remove('fadeIn');
+        modalVideo.classList.add('fadeOut');
+        modalVideo.style.display = "none";
+      };
+
+      // When user clicks anywhere outside of the Modal, close Modal
+       window.onclick = function(event) {
+          if (event.target == modalVideo) {
+             modalVideo.style.display = "none";
+             }
+          }
+
+      /*
         AUDIO PLAYER
       */
-
       var au = document.getElementById("au");
       var playbutton = document.getElementById("toggleplay");
       var time = document.getElementById("time");
