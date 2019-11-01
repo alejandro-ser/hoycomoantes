@@ -8,8 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:700|Montserrat:700|Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/circular-menu.css">
     <title>Hoy como Antes</title>
-    <!-- <link rel="stylesheet" href="https://rawgit.com/yandongCoder/circular-menu/master/dist/css/circular-menu.css">
     <style media="screen">
     .tips {
       font-size: 40px;
@@ -23,31 +23,13 @@
       left: 50%;
       top: 50%;
       }
-
-      .my-icon {
-      background: url("https://rawgit.com/yandongCoder/circular-menu/master/examples/circular-menu.png");
-      }
-
-      .icon1 {
-      background-position: 0 0;
-      }
-
-      .icon2 {
-      background-position: 0 -56px;
-      }
-
-      .icon3 {
-      background-position: 0 -116px;
-      }
-    </style> -->
+    </style>
   </head>
   <body>
     <!-- Botones principales -->
     <button id="menu" class="btn-main btn-menu" type="button" name="button">
       <span>ME <br> NÚ</span>
     </button>
-
-    <!-- <button class="btn-main btn-sound" type="button" name="button"></button> -->
 
     <!-- Contenedor -->
     <div class="pelicula container-fluid h-100">
@@ -70,11 +52,9 @@
               Tu navegador web no soporta la reproduccion de audio.
             </audio>
           </div>
-          <!-- END PLAYER -->
+
+          <!-- Menu de audios -->
           <ul class="menu__list">
-            <!-- <li>
-              <button class="btn-pelicula" type="button" name="button"></button>
-            </li> -->
             <li><button type="button" class="btn-main deDias"
                         onclick="setChapter('deDias')">DE DÍAS</button></li>
             <li><button type="button" class="btn-main aNadie"
@@ -98,9 +78,67 @@
           </ul>
         </div>
         <div class="col-7 justify-self-center">
-          <button id="triggerVideo" class="btn btn-dark ml-5" type="button" name="button">
+          <button type="button" name="button" class="btn btn-dark" onclick="triggerVideo('deDias')">Película</button>
+          <div class="circular-menu opened-nav" style="display: none">
+            <ul>
+              <li style="transform: rotate(-90deg) skew(45deg);" class="de_dias" onclick="triggerVideo('deDias')">
+                <a href="#">
+                  <div class="horizontal" style="transform: rotate(157.5deg);">
+                  </div>
+                </a>
+              </li>
+              <li style="transform: rotate(-45deg) skew(45deg);" class="de_dias_2" onclick="triggerVideo('aNadie')">
+                <a href="#">
+                  <div class="horizontal" style="transform: rotate(112.5deg);">
+                  </div>
+                </a>
+              </li>
+              <li style="transform: rotate(0deg) skew(45deg);" class="de_dias" onclick="triggerVideo('deDias')">
+                <a href="#">
+                  <div class="horizontal" style="transform: rotate(67.5deg);">
+                  </div>
+                </a>
+              </li>
+              <li style="transform: rotate(45deg) skew(45deg);" class="de_dias_2" onclick="triggerVideo('deDias')">
+                <a href="#">
+                  <div class="horizontal" style="transform: rotate(22.5deg);">
+                  </div>
+                </a>
+              </li>
+              <li style="transform: rotate(90deg) skew(45deg);" class="de_dias" onclick="triggerVideo('deDias')">
+                <a href="#">
+                  <div class="horizontal" style="transform: rotate(-22.5deg);">
+                  </div>
+                </a>
+              </li>
+              <li style="transform: rotate(135deg) skew(45deg);" class="de_dias_2" onclick="triggerVideo('deDias')">
+                <a href="#">
+                  <div class="horizontal" style="transform: rotate(-67.5deg);">
+                  </div>
+                </a>
+              </li>
+              <li style="transform: rotate(180deg) skew(45deg);" class="de_dias" onclick="triggerVideo('deDias')">
+                <a href="#">
+                  <div class="horizontal" style="transform: rotate(-112.5deg);">
+                  </div>
+                </a>
+              </li>
+              <li style="transform: rotate(225deg) skew(45deg);" class="de_dias_2" onclick="triggerVideo('deDias')">
+                <a href="#">
+                  <div class="horizontal" style="transform: rotate(-157.5deg);">
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+
+
+
+
+          <!-- <button id="triggerVideo" class="btn btn-dark ml-5" type="button" name="button">
             Película
-          </button>
+          </button> -->
         </div>
         <div class="col-3 pr-0">
           <div id="deDias" class="pelicula__info animated h-50">
@@ -158,8 +196,8 @@
               </button>
             </div>
             <!-- Video de fondo -->
-            <video controls id="video" class="img-fluid my-3">
-              <source src="video/1_de_dias.mp4" type="video/mp4">
+            <video controls id="triggerVideo" class="img-fluid my-3">
+              <source src="video/deDias.mp4" type="video/mp4">
             </video>
             <div class="modal-video__footer">
               <h3 class="text-uppercase">de días</h3>
@@ -201,14 +239,18 @@
         Modal Video
       */
       var modalVideo = document.getElementById('modalVideo');
-      var triggerVideo = document.getElementById("triggerVideo");
+      var vid = document.getElementById("triggerVideo");
       var close = document.getElementById("close");
 
       // When user clicks button, open Modal
-      triggerVideo.onclick = function() {
+      function triggerVideo(chapterVideo) {
         modalVideo.classList.remove('fadeOut');
         modalVideo.style.display = "block";
         modalVideo.classList.add('fadeIn');
+
+        vid.src = 'video/'+chapterVideo+'.mp4';
+        vid.play();
+        playPause();
       };
 
       // When user clicks Close (x), close Modal
@@ -342,74 +384,5 @@
       //volume.addEventListener("click", mute);
       //volslider.addEventListener("input", changevol);
     </script>
-
-
-
-    <!-- <div id="menu1" class="menu1 circular-menu s-S1 s-S2 s-S3 s-S4 s-S5 opened-nav" style="width: 300px; height: 300px; margin-top: -150px; margin-left: -150px; display: block; left: 393px; top: 249px;">
-
-      <ul>
-        <li style="width: 150px; height: 150px; transform: rotate(-90deg) skew(45deg);">
-          <a href="http://github.com" target="_blank" style="width: 300px; height: 300px; right: -150px; bottom: -150px; transform: skew(-45deg) rotate(-67.5deg) scale(1);" class="s-S6 s-S7">
-            <div class="horizontal" style="transform: rotate(157.5deg);">
-              <span class="fa fa-github cm-icon" style="width: 38.4265px; height: 38.4265px; font-size: 38.4265px; margin-top: 2.82355px;" aria-hidden="true"></span>
-              <span class="text" style="margin-top: 3px; top: -3px;">GitHub</span>
-            </div>
-          </a>
-        </li>
-        <li style="width: 150px; height: 150px; transform: rotate(-45deg) skew(45deg);">
-          <a style="width: 300px; height: 300px; right: -150px; bottom: -150px; transform: skew(-45deg) rotate(-67.5deg) scale(1);" class="s-S8 s-S9">
-            <div class="horizontal" style="transform: rotate(112.5deg);">
-              <span class="fa fa-gitlab cm-icon" style="color: rgb(64, 120, 192); width: 38.4265px; height: 38.4265px; font-size: 38.4265px; margin-top: 2.82355px;" aria-hidden="true"></span>
-              <span class="text" style="margin-top: 3px; top: -3px;">GitLab</span>
-            </div>
-          </a>
-        </li>
-        <li style="width: 150px; height: 150px; transform: rotate(0deg) skew(45deg);">
-          <a style="width: 300px; height: 300px; right: -150px; bottom: -150px; transform: skew(-45deg) rotate(-67.5deg) scale(1);" class="s-S10 s-S11">
-            <div class="horizontal" style="transform: rotate(67.5deg);">
-              <span class="my-icon icon1 cm-icon" style="width: 38.4265px; height: 38.4265px; font-size: 38.4265px; margin-top: 2.82355px;"></span>
-              <span class="text" style="margin-top: 3px; top: -3px;">subMenu</span>
-            </div>
-          </a>
-        </li>
-        <li style="width: 150px; height: 150px; transform: rotate(45deg) skew(45deg);">
-          <a style="width: 300px; height: 300px; right: -150px; bottom: -150px; transform: skew(-45deg) rotate(-67.5deg) scale(1);" class="s-S41 s-S42">
-            <div class="horizontal" style="transform: rotate(22.5deg);">
-              <span class="my-icon icon2 cm-icon" style="width: 38.4265px; height: 38.4265px; font-size: 38.4265px; margin-top: 2.82355px;"></span>
-              <span class="text" style="margin-top: 3px; top: -3px;">subMenu</span>
-            </div>
-          </a>
-        </li>
-        <li style="width: 150px; height: 150px; transform: rotate(90deg) skew(45deg);">
-          <a style="width: 300px; height: 300px; right: -150px; bottom: -150px; transform: skew(-45deg) rotate(-67.5deg) scale(1);" class="s-S43 s-S44">
-            <div class="horizontal" style="transform: rotate(-22.5deg);">
-              <span class="my-icon icon3 cm-icon" style="width: 38.4265px; height: 38.4265px; font-size: 38.4265px; margin-top: 2.82355px;"></span>
-              <span class="text" style="margin-top: 3px; top: -3px;">click</span>
-            </div>
-          </a>
-        </li>
-        <li style="width: 150px; height: 150px; transform: rotate(135deg) skew(45deg);">
-          <a href="#someHash" style="width: 300px; height: 300px; right: -150px; bottom: -150px; transform: skew(-45deg) rotate(-67.5deg) scale(1);" class="s-S45 s-S46">
-            <div class="horizontal" style="transform: rotate(-67.5deg);">
-              <span class="text" style="margin-top: 22.4383px; top: 0px;">hash-href</span>
-            </div>
-          </a>
-        </li>
-        <li style="width: 150px; height: 150px; transform: rotate(180deg) skew(45deg);">
-          <a style="width: 300px; height: 300px; right: -150px; bottom: -150px; transform: skew(-45deg) rotate(-67.5deg) scale(1);" class="s-S47 s-S48">
-            <div class="horizontal" style="transform: rotate(-112.5deg);">
-              <span class="text" style="margin-top: 22.4383px; top: 0px;">clickMe!</span>
-            </div>
-          </a>
-        </li>
-        <li style="width: 150px; height: 150px; transform: rotate(225deg) skew(45deg);">
-          <a style="width: 300px; height: 300px; right: -150px; bottom: -150px; transform: skew(-45deg) rotate(-67.5deg) scale(1);" class="disabled s-S49 s-S50">
-            <div class="horizontal" style="transform: rotate(-157.5deg);">
-              <span class="text" style="margin-top: 22.4383px; top: 0px;">disabled</span>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </div> -->
   </body>
 </html>
