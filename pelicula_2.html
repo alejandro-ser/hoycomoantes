@@ -52,87 +52,45 @@
     <div class="pelicula container-fluid h-100">
       <div class="row justify-content-center align-items-center h-100">
         <div class="pelicula__content col-2">
-          <!-- PLAYER -->
-          <div id='audioplayermain'>
-            <div id='playerboundry'>
-              <div id='toggleplay' class='toggleplay'></div>
-              <div id='progress'>
-                <div id='seekbar' class='seekbar'></div>
-                <div id='ball' class='ball' draggable='true'></div>
-              </div>
-              <span id='time' style="display:none">00:00/00:00</span>
-              <!-- <div id='volume' class='fullvolume'></div>
-              <input type='range' max="100" min="0" id='volslider' value='100'> -->
-            </div>
-            <audio id='au' src="audio/1_de_dias.mp3" preload='metadata'>
-              <!-- <source src="audio/1_de_dias.mp3" type="audio/mp3"> -->
-              Tu navegador web no soporta la reproduccion de audio.
-            </audio>
-          </div>
-          <!-- END PLAYER -->
           <ul class="menu__list">
-            <!-- <li>
+            <li>
               <button class="btn-pelicula" type="button" name="button"></button>
-            </li> -->
-            <li><button type="button" class="btn-main deDias"
-                        onclick="setChapter('deDias')">DE DÍAS</button></li>
-                        <!-- onmouseover="showInfo('de_dias')"
-                        onmouseout="hideInfo('de_dias')" -->
-            <li><button type="button" class="btn-main aNadie"
-                        onclick="setChapter('aNadie')">A NADIE</button></li>
-                        <!-- onmouseover="showInfo('a_nadie')"
-                        onmouseout="hideInfo('a_nadie')" -->
-            <li><button type="button" class="btn-main porFavor"
-                        onclick="setChapter('porFavor')">POR FAVOR</button></li>
-                        <!-- onmouseover="showInfo('por_favor')"
-                        onmouseout="hideInfo('por_favor')" -->
-            <li><button type="button" class="btn-main amanAma"
-                        onclick="setChapter('amanAma')">AMAN AMA</button></li>
-                        <!-- onmouseover="showInfo('aman_ama')"
-                        onmouseout="hideInfo('aman_ama')" -->
-            <li><button type="button" class="btn-main si"
-                        onclick="setChapter('si')">¿SÍ?</button></li>
-                        <!-- onmouseover="showInfo('si')"
-                        onmouseout="hideInfo('si')" -->
-            <li><button type="button" class="btn-main cosasCasos"
-                        onclick="setChapter('cosasCasos')">COSAS CASOS</button></li>
-                        <!-- onmouseover="showInfo('cosas_casos')"
-                        onmouseout="hideInfo('cosas_casos')" -->
-            <li><button type="button" class="btn-main dosDisparos"
-                        onclick="setChapter('dosDisparos')">DOS DISPAROS</button></li>
-                        <!-- onmouseover="showInfo('dos_disparos')"
-                        onmouseout="hideInfo('dos_disparos')" -->
-            <li><button type="button" class="btn-main hoyComoAntes"
-                        onclick="setChapter('hoyComoAntes')">HOY COMO ANTES</button></li>
-                        <!-- onmouseover="showInfo('hoy_como_antes')"
-                        onmouseout="hideInfo('hoy_como_antes')" -->
-            <li><button type="button" class="btn-main no"
-                        onclick="setChapter('no')">NO</button></li>
-                        <!-- onmouseover="showInfo('no')"
-                        onmouseout="hideInfo('no')" -->
-            <li><button type="button" class="btn-main noMeAcuerdo"
-                        onclick="setChapter('noMeAcuerdo')">NO ME ACUERDO</button></li>
-                        <!-- onmouseover="showInfo('no_me_acuerdo')"
-                        onmouseout="hideInfo('no_me_acuerdo')" -->
+              <audio id="playerAudio" src="audio/1_de_dias.mp3"></audio>
+            </li>
+            <li>
+              <a href="#"
+                  onmouseover="showInfo('de_dias')"
+                  onmouseout="hideInfo('de_dias')"
+                  onclick="document.getElementById('playerAudio').play()">DE DÍAS</a>
+            </li>
+            <li><a onmouseover="showInfo('a_nadie')" onmouseout="hideInfo('a_nadie')" href="#">A NADIE</a></li>
+            <li><a onmouseover="showInfo('por_favor')" onmouseout="hideInfo('por_favor')" href="#">POR FAVOR</a></li>
+            <li><a onmouseover="showInfo('aman_ama')" onmouseout="hideInfo('aman_ama')" href="#">AMAN AMA</a></li>
+            <li><a onmouseover="showInfo('si')" onmouseout="hideInfo('si')" href="#">¿SÍ?</a></li>
+            <li><a onmouseover="showInfo('cosas_casos')" onmouseout="hideInfo('cosas_casos')" href="#">COSAS CASOS</a></li>
+            <li><a onmouseover="showInfo('dos_disparos')" onmouseout="hideInfo('dos_disparos')" href="#">DOS DISPAROS</a></li>
+            <li><a onmouseover="showInfo('hoy_como_antes')" onmouseout="hideInfo('hoy_como_antes')" href="#">HOY COMO ANTES</a></li>
+            <li><a onmouseover="showInfo('no')" onmouseout="hideInfo('no')" href="#">NO</a></li>
+            <li><a onmouseover="showInfo('no_me_acuerdo')" onmouseout="hideInfo('no_me_acuerdo')" href="#">NO ME ACUERDO</a></li>
           </ul>
         </div>
         <div class="col-7">
           <span>Comming soon..</span>
         </div>
         <div class="col-3 pr-0">
-          <div id="deDias" class="pelicula__info animated h-50">
+          <div id="de_dias" class="pelicula__info animated h-50">
             <h2>DE DÍAS</h2>
             <p><i>De días</i> se construye de la voz que nombra diferentes tiempos donde los cambios de espacio evidencian el movimiento y los recorridos que se van a dar en el transcurso de la narración.</p>
           </div>
-          <div id="aNadie" class="pelicula__info animated h-50">
+          <div id="a_nadie" class="pelicula__info animated h-50">
             <h2>A NADIE</h2>
             <p><i>A nadie</i> deja entrever la naturaleza secreta del material desde la voz, una pieza que es compuesta por fracciones del diario íntimo (grabado) e insinúa la relación de aparente confidencialidad que se tiene con el dispositivo.</p>
           </div>
-          <div id="porFavor" class="pelicula__info animated h-50">
+          <div id="por_favor" class="pelicula__info animated h-50">
             <h2>POR FAVOR</h2>
             <p><i>Por Favor</i> da la bienvenida a los diferentes recorridos que se harán a lo largo de la película. El sonido robótico da la instrucción iniciando  los viajes temporales de los capítulos.</p>
           </div>
-          <div id="amanAma" class="pelicula__info animated h-50">
+          <div id="aman_ama" class="pelicula__info animated h-50">
             <h2>AMAN AMA</h2>
             <p><i>Aman Ama</i> se compone como una oración en formato de mantra, la relación sonora con la palabra Amor, da sentido a lo que considero la esencia de la espiritualidad, concepto abordado en esta pieza.</p>
           </div>
@@ -140,15 +98,15 @@
             <h2>¿SI?</h2>
             <p><i>¿Si?</i> suscitan preguntas sobre los vínculos espirituales provocados por la soledad, dos posiciones que se contraponen desde el sonido y la imagen.</p>
           </div>
-          <div id="cosasCasos" class="pelicula__info animated h-50">
+          <div id="cosas_casos" class="pelicula__info animated h-50">
             <h2>COSAS CASOS</h2>
             <p><i>Cosas Casos</i> tienen como intención reforzar la idea de la soledad y la espiritualidad a partir del vínculo sonido-imagen. Todo esto se manifiesta en los gestos de dos mujeres mayores y lo que su edad implica en cuanto a modismos y sabiduría.</p>
           </div>
-          <div id="dosDisparos" class="pelicula__info animated h-50">
+          <div id="dos_disparos" class="pelicula__info animated h-50">
             <h2>DOS DISPAROS</h2>
             <p><i>Dos Disparos</i> se centra en dos acontecimientos: uno, la imposibilidad de cerrar los oídos; y dos, la historia de un asesinato contada por un niño.</p>
           </div>
-          <div id="hoyComoAntes" class="pelicula__info animated h-50">
+          <div id="hoy_como_antes" class="pelicula__info animated h-50">
             <h2>HOY COMO ANTES</h2>
             <p><i>Hoy como antes</i> cuestiona el paso del tiempo y las formas en las que éste se refleja en el cuerpo. Las texturas sonoras de esta pieza pretenden crear tensiones entre el espacio interior y el exterior.</p>
           </div>
@@ -156,7 +114,7 @@
             <h2>NO</h2>
             <p><i>No</i> incorpora el dispositivo (cámara y grabadora) al cuerpo físico, para así dar una idea de mimesis entre el cuerpo humano y el cuerpo de la máquina.</p>
           </div>
-          <div id="noMeAcuerdo" class="pelicula__info animated h-50">
+          <div id="no_me_acuerdo" class="pelicula__info animated h-50">
             <h2>NO ME ACUERDO</h2>
             <p><i>No me acuerdo</i> es una pieza que trabaja desde la autonomía del dispositivo, cuestionando el manejo y la vida de la herramienta.</p>
           </div>
@@ -191,125 +149,7 @@
     </div>
     <!-- Scripts -->
     <script src="js/main.js" charset="utf-8"></script>
-    <script type="text/javascript">
-      /*
-        AUDIO PLAYER
-      */
 
-      var au = document.getElementById("au");
-      var playbutton = document.getElementById("toggleplay");
-      var time = document.getElementById("time");
-      var seekbar = document.getElementById("seekbar");
-      var seekbarwidth = document.getElementById("seekbar").offsetWidth;
-      var ball = document.getElementById("ball");
-      var volume = document.getElementById("volume");
-      var volslider = document.getElementById("volslider");
-
-      function playPause() {
-        if (au.paused) {
-          playbutton.className = 'toggleplaypause';
-          au.play();
-        } else {
-          au.pause();
-          playbutton.className = 'toggleplay';
-        }
-      }
-
-      function formatTime(seconds) {
-          seconds = Math.round(seconds);
-          minutes = Math.floor(seconds / 60);
-          minutes = (minutes >= 10) ? minutes : "0" + minutes;
-          seconds = Math.floor(seconds % 60);
-          seconds = (seconds >= 10) ? seconds : "0" + seconds;
-          return minutes + ":" + seconds;
-      }
-
-      function timeupdate() {
-          var ongoingtime = formatTime(au.currentTime);
-          var totaltime = formatTime(au.duration);
-          time.innerHTML = (ongoingtime + '/' + totaltime);
-          seekbar.style.width = au.currentTime / au.duration * 100 + '%';
-          ball.style.marginLeft = 'calc( -10px + ' + au.currentTime / au.duration * 100 + '% )';
-
-          if (au.networkState === au.NETWORK_LOADING) {
-              // The user agent is actively trying to download data.
-              // The colour of the ball changes to red while buffering.
-              ball.style.backgroundColor = 'red';
-          } else {
-              ball.style.backgroundColor = '';//returns to original colour
-          }
-      }
-
-      function changeTime(event) {
-          var clickedpos = event.clientX;
-          var offsets = seekbar.getBoundingClientRect();
-          //gets offsets of the seekbar
-          var width = clickedpos - offsets.left;
-          //so that we can find the difference(in px) in mouse drag
-          au.currentTime = width * au.duration / 600;//changes current time
-          ball.style.marginLeft = 'calc( -10px + ' + au.currentTime / au.duration * 100 + '% )';
-          //ball moves forward before timeupdate function fires.
-      }
-
-      function mute() {
-          if (au.muted = !au.muted) {
-              volume.className = 'mute';
-              volslider.value = 0
-          } else {
-              volume.className = 'fullvolume';
-              volslider.value = 100
-          }
-      }
-
-      function changevol() {
-          au.volume = volslider.value / 100;
-          if (volslider.value == 0) {
-              volume.className = 'mute';
-          }
-          if (volslider.value > 0) {
-              volume.className = 'fullvolume';
-          }
-      }
-
-      function setChapter(chapter){
-        au.src = 'audio/'+chapter+'.mp3';
-        els = document.getElementsByClassName('btn-main');
-        Array.prototype.forEach.call(els, function(el) {
-            el.classList.remove('active');
-        });
-        document.querySelector('.'+chapter).classList.add('active');
-        showInfo(chapter);
-        playPause();
-      }
-
-      /*
-        Mostrar info de capitulo
-      */
-      function showInfo(id) {
-        infos = document.getElementsByClassName('pelicula__info');
-        Array.prototype.forEach.call(infos, function(inf) {
-            inf.style.display = "none";
-        });
-        info = document.getElementById(id);
-        info.classList.add('fadeInRight');
-        info.style.display = "block";
-      }
-      //
-      // function hideInfo(id) {
-      //   info = document.getElementById(id);
-      //   info.style.display = "none";
-      // }
-
-      //chapter.addEventListener("click", setChapter);
-      playbutton.addEventListener("click", playPause);
-      au.addEventListener("timeupdate", timeupdate);
-      progress.addEventListener("click", changeTime);
-      progress.addEventListener("mousedown", changeTime);
-      progress.addEventListener("dragend", changeTime);
-      progress.addEventListener("mouseup", changeTime);
-      //volume.addEventListener("click", mute);
-      //volslider.addEventListener("input", changevol);
-    </script>
 
 
 

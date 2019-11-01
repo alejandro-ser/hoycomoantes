@@ -43,17 +43,3 @@ back.onclick = function() {
        modal.style.display = "none";
        }
     }
-
-
-// Pelicula
-function showInfo(id) {
-  info = document.getElementById(id);
-  info.classList.remove('fadeOutRight');
-  info.classList.add('fadeInRight');
-  info.style.display = "block";
-}
-
-function hideInfo(id) {
-  info = document.getElementById(id);
-  info.style.display = "none";
-}
