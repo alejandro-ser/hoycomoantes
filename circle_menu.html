@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <!-- <link rel="stylesheet" href="css/estilos.css"> -->
+  <title>Hoy como Antes</title>
+  <link rel="stylesheet" href="https://rawgit.com/yandongCoder/circular-menu/master/dist/css/circular-menu.css">
+  <style media="screen">
+  .tips {
+    font-size: 40px;
+    color: #999;
+    position: fixed;
+    top: 50%;
+    left: 30%;
+    }
+
+    .menu1 {
+    left: 50%;
+    top: 50%;
+    }
+
+    .my-icon {
+    background: url("https://rawgit.com/yandongCoder/circular-menu/master/examples/circular-menu.png");
+    }
+
+    .icon1 {
+    background-position: 0 0;
+    }
+
+    .icon2 {
+    background-position: 0 -56px;
+    }
+
+    .icon3 {
+    background-position: 0 -116px;
+    }
+  </style>
+</head>
+<body>
+  <div class="tips">
+    Right click in page.
+  </div>
+  <div id="menu1" class="menu1">
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js" charset="utf-8"></script>
+  <script src="https://use.fontawesome.com/1ddffe7916.js" charset="utf-8"></script>
+  <script src="https://rawgit.com/yandongCoder/circular-menu/master/dist/js/circular-menu.js" charset="utf-8"></script>
+
+  <script type="text/javascript">
+  var menu = CMenu("#menu1")
+  .config({
+    menus: [{
+      title: "GitHub",
+      icon: "fa fa-github",
+      href: {
+        url: "http://github.com",
+        blank: true
+      }
+    }, {
+      title: "GitLab",
+      icon: ["fa fa-gitlab", '#4078c0'],
+    }, {
+      title: "subMenu",
+      icon: "my-icon icon1",
+      menus: [{
+        title: 'subMenu1',
+        icon: 'fa fa-firefox'
+      }, {
+        title: 'subMenu2',
+        icon: 'fa fa-file'
+      },{
+        title: 'subMenu1',
+        icon: 'fa fa-firefox'
+      }, {
+        title: 'subMenu2',
+        icon: 'fa fa-file'
+      },{
+        title: 'subMenu1',
+        icon: 'fa fa-firefox'
+      }, {
+        title: 'subMenu2',
+        icon: 'fa fa-file'
+      },{
+        title: 'subMenu1',
+        icon: 'fa fa-firefox'
+      }, {
+        title: 'subMenu2',
+        icon: 'fa fa-file'
+      },{
+        title: 'subMenu1',
+        icon: 'fa fa-firefox'
+      }, {
+        title: 'subMenu2',
+        icon: 'fa fa-file'
+      },{
+        title: 'subMenu1',
+        icon: 'fa fa-firefox'
+      }, {
+        title: 'subMenu2',
+        icon: 'fa fa-file'
+      }]
+    }, {
+      title: "subMenu",
+      icon: "my-icon icon2"
+    }, {
+      title: "click",
+      icon: "my-icon icon3"
+    }, {
+      title: "hash-href",
+      href: "#someHash"
+    }, {
+      title: "clickMe!",
+      click: function() {
+        alert('click event callback');
+      }
+    }, {
+      disabled: true,
+      title: "disabled"
+    }]
+  });
+
+
+
+  $(document).click(function() {
+  menu.hide();
+  });
+  $(document).contextmenu(function(e) {
+  menu.show([e.pageX, e.pageY]);
+  return false;
+  });
+  </script>
+</body>
+</html>

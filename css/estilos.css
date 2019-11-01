@@ -257,7 +257,9 @@ p {
   padding-right: 10rem;
 }
 
-.description__content .btn-main {
+.description__content .btn-main,
+.sobre_mi__content .btn-main,
+.referencias__content .btn-main {
   font-size: 1.1rem;
   border-width: 1px;
   border-color: #000;
@@ -271,7 +273,9 @@ p {
   padding-right: 15px;
 }
 
-.description__content .btn-main:hover {
+.description__content .btn-main:hover,
+.sobre_mi__content .btn-main:hover,
+.referencias__content .btn-main:hover {
   background-color: #000;
   color: #fff;
   border-color: #fff;
@@ -564,4 +568,57 @@ p {
      border-radius:100%;
      background:aqua;
      cursor: pointer;
+}
+
+
+/*
+  SOBRE MI
+ */
+
+.sobre_mi__top,
+.sobre_mi__bottom {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 10vh;
+}
+
+.sobre_mi__top {
+  background-image: url(../img/sobre_top.jpg);
+}
+
+.sobre_mi__bottom {
+  background-image: url(../img/sobre_bottom.jpg);
+}
+
+.sobre_mi__content p {
+  background-color: #fff;
+  padding: .8rem 1rem;
+}
+
+/*
+  REFERENCIAS
+ */
+
+.referencias__left,
+.referencias__right {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+}
+
+.referencias__left {
+  background-image: url(../img/refer_left.jpg);
+}
+
+.referencias__right {
+  background-image: url(../img/refer_right.jpg);
+}
+
+.referencias__item {
+  background-color: #fff;
+  padding: 3rem 1.2rem;
+}
+
+.referencias__content .btn-main {
+  background-color: #fff;
 }
