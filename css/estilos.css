@@ -659,25 +659,3 @@ p {
 .referencias__content .btn-main {
   background-color: #fff;
 }
-
-/*
-  CARRETE MENU
- */
-
-.carrete-menu {
-    width: 300px;
-    height: 300px;
-    margin-top: -150px;
-    margin-left: -150px;
-    display: block;
-    left: 393px;
-    top: 249px;
-}
-
-.de_dias {
-  background-image: url(../img/1_peli.png);
-}
-
-.de_dias_2 {
-  background-image: url(../img/2_peli.png);
-}
