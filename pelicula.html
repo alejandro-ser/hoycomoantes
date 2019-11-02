@@ -148,7 +148,6 @@
               </div>
             </div>
           </div>
-          <!-- <button type="button" name="button" class="btn btn-dark" onclick="triggerVideo('deDias')">Película</button> -->
         </div>
         <div class="col-3 pr-0">
           <div id="deDias" class="pelicula__info animated h-50">
@@ -210,7 +209,7 @@
               <source src="video/deDias.mp4" type="video/mp4">
             </video>
             <div class="modal-video__footer">
-              <h3 id="videoTitle" class="text-uppercase">de días</h3>
+              <h3 id="videoTitle" class="text-uppercase"></h3>
             </div>
           </div>
         </div>
@@ -277,7 +276,43 @@
         // vid.src = 'video/'+chapterVideo+'.mp4';
         // vid.play();
         // playPause();
-        document.getElementById('videoTitle').innerHTML = chapterVideo;
+        if (chapterVideo == 'deDias') {
+          document.getElementById('videoTitle').innerHTML = 'de días';
+        } else if (chapterVideo == 'aNadie') {
+          document.getElementById('videoTitle').innerHTML = 'a nadie';
+        }else if (chapterVideo == 'porFavor') {
+          document.getElementById('videoTitle').innerHTML = 'por favor';
+        } else if (chapterVideo == 'amanAma') {
+          document.getElementById('videoTitle').innerHTML = 'aman ama';
+        } else if (chapterVideo == 'si') {
+          document.getElementById('videoTitle').innerHTML = '¿sí?';
+        } else if (chapterVideo == 'cosasCasos') {
+          document.getElementById('videoTitle').innerHTML = 'cosas casos';
+        } else if (chapterVideo == 'dosDisparos') {
+          document.getElementById('videoTitle').innerHTML = 'dos Disparos';
+        } else if (chapterVideo == 'hoyComoAntes') {
+          document.getElementById('videoTitle').innerHTML = 'a hoy como antes';
+        } else if (chapterVideo == 'no') {
+          document.getElementById('videoTitle').innerHTML = 'no';
+        } else if (chapterVideo == 'noMeAcuerdo') {
+          document.getElementById('videoTitle').innerHTML = 'no me acuerdo';
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       };
 
       function addHover(chapterTitle){
