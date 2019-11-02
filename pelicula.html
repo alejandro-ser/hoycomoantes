@@ -42,25 +42,35 @@
           <!-- Menu de audios -->
           <ul class="menu__list">
             <li><button type="button" class="btn-main deDias"
-                        onclick="setChapter('deDias')">DE DÍAS</button></li>
+                        onclick="setChapter('deDias')"
+                        onmouseover="showInfoVid('deDias')">DE DÍAS</button></li>
             <li><button type="button" class="btn-main aNadie"
-                        onclick="setChapter('aNadie')">A NADIE</button></li>
+                        onclick="setChapter('aNadie')"
+                        onmouseover="showInfoVid('aNadie')">A NADIE</button></li>
             <li><button type="button" class="btn-main porFavor"
-                        onclick="setChapter('porFavor')">POR FAVOR</button></li>
+                        onclick="setChapter('porFavor')"
+                        onmouseover="showInfoVid('porFavor')">POR FAVOR</button></li>
             <li><button type="button" class="btn-main amanAma"
-                        onclick="setChapter('amanAma')">AMAN AMA</button></li>
+                        onclick="setChapter('amanAma')"
+                        onmouseover="showInfoVid('amanAma')">AMAN AMA</button></li>
             <li><button type="button" class="btn-main si"
-                        onclick="setChapter('si')">¿SÍ?</button></li>
+                        onclick="setChapter('si')"
+                        onmouseover="siid('dosDisparos')">¿SÍ?</button></li>
             <li><button type="button" class="btn-main cosasCasos"
-                        onclick="setChapter('cosasCasos')">COSAS CASOS</button></li>
+                        onclick="setChapter('cosasCasos')"
+                        onmouseover="showInfoVid('cosasCasos')">COSAS CASOS</button></li>
             <li><button type="button" class="btn-main dosDisparos"
-                        onclick="setChapter('dosDisparos')">DOS DISPAROS</button></li>
+                        onclick="setChapter('dosDisparos')"
+                        onmouseover="showInfoVid('dosDisparos')">DOS DISPAROS</button></li>
             <li><button type="button" class="btn-main hoyComoAntes"
-                        onclick="setChapter('hoyComoAntes')">HOY COMO ANTES</button></li>
+                        onclick="setChapter('hoyComoAntes')"
+                        onmouseover="showInfoVid('hoyComoAntes')">HOY COMO ANTES</button></li>
             <li><button type="button" class="btn-main no"
-                        onclick="setChapter('no')">NO</button></li>
+                        onclick="setChapter('no')"
+                        onmouseover="noid('dosDisparos')">NO</button></li>
             <li><button type="button" class="btn-main noMeAcuerdo"
-                        onclick="setChapter('noMeAcuerdo')">NO ME ACUERDO</button></li>
+                        onclick="setChapter('noMeAcuerdo')"
+                        onmouseover="showInfoVid('noMeAcuerdo')">NO ME ACUERDO</button></li>
           </ul>
         </div>
         <div class="col-7 justify-self-center">
@@ -439,6 +449,10 @@
       progress.addEventListener("mouseup", changeTime);
       //volume.addEventListener("click", mute);
       //volslider.addEventListener("input", changevol);
+
+      function palFondo(laClase) {
+
+      }
     </script>
   </body>
 </html>
