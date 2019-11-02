@@ -204,6 +204,7 @@
 .middle .down:hover {
   background-color: rgba(0, 0, 0, 0.5);
   filter: grayscale(90%);
+  background-position-y: -1rem;
 }
 
 .middle .up {
