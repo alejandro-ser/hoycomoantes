@@ -68,69 +68,77 @@
             <div class="col-6">
               <div class="circular-menu opened-nav ml-5">
                 <div class="middle">
-                  <span class="up" onclick="triggerVideo('hoyComoAntes')"></span>
-                  <span class="down" onclick="triggerVideo('noMeAcuerdo')"></span>
+                  <span class="up" onclick="triggerVideo('hoyComoAntes')" onmouseover="showInfoVid('hoyComoAntes')"></span>
+                  <span class="down" onclick="triggerVideo('noMeAcuerdo')" onmouseover="showInfoVid('noMeAcuerdo')"></span>
                 </div>
                 <ul>
                   <li class="deDiasV"
-                      style="transform: rotate(-90deg) skew(45deg);"
-                      onclick="triggerVideo('deDias')">
+                      style="transform: rotate(45deg) skew(45deg);"
+                      onclick="triggerVideo('deDias')"
+                      onmouseover="showInfoVid('deDias')">
                     <a href="#">
                       <div class="horizontal" style="transform: rotate(157.5deg);">
                       </div>
                     </a>
                   </li>
                   <li class="aNadieV"
-                      style="transform: rotate(-45deg) skew(45deg);"
-                      onclick="triggerVideo('aNadie')">
+                      style="transform: rotate(90deg) skew(45deg);"
+                      onclick="triggerVideo('aNadie')"
+                      onmouseover="showInfoVid('aNadie')">
                     <a href="#">
                       <div class="horizontal" style="transform: rotate(112.5deg);">
                       </div>
                     </a>
                   </li>
                   <li class="porFavorV"
-                      style="transform: rotate(0deg) skew(45deg);"
-                      onclick="triggerVideo('porFavor')">
+                      style="transform: rotate(135deg) skew(45deg);"
+                      onclick="triggerVideo('porFavor')"
+                      onmouseover="showInfoVid('porFavor')">
                     <a href="#">
                       <div class="horizontal" style="transform: rotate(67.5deg);">
                       </div>
                     </a>
                   </li>
                   <li class="amanAmaV"
-                      style="transform: rotate(45deg) skew(45deg);"
-                      onclick="triggerVideo('amanAma')">
+                      style="transform: rotate(180deg) skew(45deg);"
+                      onclick="triggerVideo('amanAma')"
+                      onmouseover="showInfoVid('amanAma')">
                     <a href="#">
                       <div class="horizontal" style="transform: rotate(22.5deg);">
                       </div>
                     </a>
                   </li>
                   <li class="siV"
-                      style="transform: rotate(90deg) skew(45deg);"
-                      onclick="triggerVideo('si')">
+                      style="transform: rotate(225deg) skew(45deg);"
+                      onclick="triggerVideo('si')"
+                      onmouseover="showInfoVid('si')">
                     <a href="#">
                       <div class="horizontal" style="transform: rotate(-22.5deg);">
                       </div>
                     </a>
                   </li>
                   <li class="cosasCasosV"
-                      style="transform: rotate(135deg) skew(45deg);"
-                      onclick="triggerVideo('cosasCasos')">
+                      style="transform: rotate(-90deg) skew(45deg);"
+                      onclick="triggerVideo('cosasCasos')"
+                      onmouseover="showInfoVid('cosasCasos')">
                     <a href="#">
                       <div class="horizontal" style="transform: rotate(-67.5deg);">
                       </div>
                     </a>
                   </li>
                   <li class="dosDisparosV"
-                      style="transform: rotate(180deg) skew(45deg);"
-                      onclick="triggerVideo('dosDisparos')">
+                      style="transform: rotate(-45deg) skew(45deg);"
+                      onclick="triggerVideo('dosDisparos')"
+                      onmouseover="showInfoVid('dosDisparos')">
                     <a href="#">
                       <div class="horizontal" style="transform: rotate(-112.5deg);">
                       </div>
                     </a>
                   </li>
                   <li class="noV"
-                      style="transform: rotate(225deg) skew(45deg);"
-                      onclick="triggerVideo('no')">
+                      style="transform: rotate(0deg) skew(45deg);"
+                      onclick="triggerVideo('no')"
+                      onmouseover="showInfoVid('no')">
                     <a href="#">
                       <div class="horizontal" style="transform: rotate(-157.5deg);">
                       </div>
@@ -260,9 +268,15 @@
         modalVideo.style.display = "block";
         modalVideo.classList.add('fadeIn');
 
+        au.pause();
+        au.src = 'audio/'+chapterVideo+'.mp3';
         vid.src = 'video/'+chapterVideo+'.mp4';
         vid.play();
-        playPause();
+        au.play();
+
+        // vid.src = 'video/'+chapterVideo+'.mp4';
+        // vid.play();
+        // playPause();
         document.getElementById('videoTitle').innerHTML = chapterVideo;
       };
 
@@ -285,6 +299,15 @@
              au.pause();
              }
           }
+
+        function showInfoVid(chapterInfo) {
+          els = document.getElementsByClassName('btn-main');
+          Array.prototype.forEach.call(els, function(el) {
+              el.classList.remove('active');
+          });
+          document.querySelector('.'+chapterInfo).classList.add('active');
+          showInfo(chapterInfo);
+        }
 
       /*
         AUDIO PLAYER
@@ -357,6 +380,9 @@
       }
 
       function setChapter(chapter){
+        if(au.currentTime > 0) {
+          au.pause();
+        }
         au.src = 'audio/'+chapter+'.mp3';
         els = document.getElementsByClassName('btn-main');
         Array.prototype.forEach.call(els, function(el) {

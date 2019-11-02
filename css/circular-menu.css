@@ -143,35 +143,35 @@
 }
 
 .deDiasV {
-  background-image: url(../img/1_peli.png);
+  background-image: url(../img/de_dias.png);
 }
 
 .aNadieV {
-  background-image: url(../img/2_peli.png);
+  background-image: url(../img/a_nadie.png);
 }
 
 .porFavorV {
-  background-image: url(../img/3_peli.png);
+  background-image: url(../img/por_favor.png);
 }
 
 .amanAmaV {
-  background-image: url(../img/4_peli.png);
+  background-image: url(../img/aman_ama.png);
 }
 
 .siV {
-  background-image: url(../img/5_peli.png);
+  background-image: url(../img/si.png);
 }
 
 .cosasCasosV {
-  background-image: url(../img/1_peli.png);
+  background-image: url(../img/cosas_casos.png);
 }
 
 .dosDisparosV {
-  background-image: url(../img/2_peli.png);
+  background-image: url(../img/dos_disparos.png);
 }
 
 .noV {
-  background-image: url(../img/3_peli.png);
+  background-image: url(../img/no.png);
 }
 
 .middle {
@@ -201,13 +201,13 @@
 
 .middle .up {
   border-radius: 105px 105px 0 0;
-  background-image: url(../img/4_peli.png);
+  background-image: url(../img/hoy_como_antes.png);
   background-size: cover;
 }
 
 .middle .down {
   border-radius: 0 0 105px 105px;
   top: 50%;
-  background-image: url(../img/3_peli.png);
+  background-image: url(../img/no_me_acuerdo.png);
   background-size: cover;
 }
