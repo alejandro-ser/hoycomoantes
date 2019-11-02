@@ -659,3 +659,8 @@ p {
 .referencias__content .btn-main {
   background-color: #fff;
 }
+
+
+.show {
+  display: block;
+}
