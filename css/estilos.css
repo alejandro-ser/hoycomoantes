@@ -660,6 +660,39 @@ p {
   background-color: #fff;
 }
 
+.referencias .jumbotron {
+  background-color: #fff;
+  height: 85vh;
+  overflow-y: scroll;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.referencias .nav-pills a {
+  color: #000;
+  border: 2px solid #000;
+  text-align: center;
+  font-family: 'Josefin Slab', serif;
+}
+
+.referencias .nav-pills a:hover {
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #fff;
+}
+
+.referencias .jumbotron div {
+  padding: 0.4rem 0;
+}
+
+.referencias .jumbotron a {
+  color: #000;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background-color: #000;
+  color: #fff;
+}
+
 
 .show {
   display: block;
