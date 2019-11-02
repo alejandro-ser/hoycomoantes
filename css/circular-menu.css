@@ -74,7 +74,7 @@
   width: 150px; height: 150px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-x: center;
+  background-position-y: 2rem;
 }
 
 .circular-menu ul li:hover {
@@ -171,7 +171,7 @@
 }
 
 .noV {
-  background-image: url(../img/no.png);
+  background-image: url(../img/no.jpg);
 }
 
 .middle {
@@ -201,13 +201,13 @@
 
 .middle .up {
   border-radius: 105px 105px 0 0;
-  background-image: url(../img/hoy_como_antes.png);
+  background-image: url(../img/hoy_como_antes.jpg);
   background-size: cover;
 }
 
 .middle .down {
   border-radius: 0 0 105px 105px;
   top: 50%;
-  background-image: url(../img/no_me_acuerdo.png);
+  background-image: url(../img/no_me_acuerdo.jpg);
   background-size: cover;
 }
