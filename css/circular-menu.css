@@ -78,7 +78,8 @@
 }
 
 .circular-menu ul li:hover {
-  opacity: 0.7;
+  filter: grayscale(90%);
+  background-position-y: 1rem;
 }
 /* line 69, ../../sass/circular-menu.scss */
 .circular-menu ul li a {
@@ -197,6 +198,12 @@
 .middle .up:hover,
 .middle .down:hover {
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.middle .up:hover,
+.middle .down:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  filter: grayscale(90%);
 }
 
 .middle .up {
