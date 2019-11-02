@@ -41,7 +41,7 @@
 }
 /* line 43, ../../sass/circular-menu.scss */
 .circular-menu.opened-nav li {
-  transition: all .3s ease .3s;
+  transition: all .2s ease .2s;
   pointer-events: none;
   border-right: 5px solid rgb(236, 237, 239);
   border-bottom: 5px solid rgb(236, 237, 239);
@@ -193,12 +193,9 @@
   position: absolute;
   border: 8px solid rgb(236,237,239);
   cursor: pointer;
+  transition: all .2s ease .2s;
 }
 
-.middle .up:hover,
-.middle .down:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-}
 
 .middle .up:hover,
 .middle .down:hover {
