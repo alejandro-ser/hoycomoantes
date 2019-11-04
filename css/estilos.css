@@ -697,3 +697,72 @@ p {
 .show {
   display: block;
 }
+
+
+
+/* ==============================
+    R E S P O N S I V E
+  ===============================*/
+
+@media (min-width: 320px) {
+
+  .index__content h1 {
+    font-size: 2.6rem;
+  }
+
+  .index__content .btn-main {
+    font-size: 1.2rem;
+  }
+
+  .index__content .btn-main span {
+    padding: 0 30px;
+  }
+
+
+}
+
+@media (min-width: 400px) {
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+  .index__content h1 {
+    font-size: 3.6rem;
+  }
+
+  .index__content .btn-main {
+    font-size: 2rem;
+  }
+
+  .index__content .btn-main span {
+    padding: 0 40px;
+  }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .index__content h1 {
+    font-size: 65px;
+  }
+
+  .index__content .btn-main {
+    font-size: 26px;
+  }
+
+  .index__content .btn-main span {
+    padding: 0 60px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
