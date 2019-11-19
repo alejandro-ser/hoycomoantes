@@ -278,14 +278,9 @@
         modalVideo.classList.add('fadeIn');
 
         au.pause();
-        au.src = 'audio/'+chapterVideo+'.mp3';
         vid.src = 'video/'+chapterVideo+'.mp4';
         vid.play();
-        au.play();
 
-        // vid.src = 'video/'+chapterVideo+'.mp4';
-        // vid.play();
-        // playPause();
         if (chapterVideo == 'deDias') {
           document.getElementById('videoTitle').innerHTML = 'de días';
         } else if (chapterVideo == 'aNadie') {
@@ -318,14 +313,14 @@
         modalVideo.classList.remove('fadeIn');
         modalVideo.classList.add('fadeOut');
         modalVideo.style.display = "none";
-        au.pause();
+        vid.pause();
       };
 
       // When user clicks anywhere outside of the Modal, close Modal
        window.onclick = function(event) {
           if (event.target == modalVideo) {
              modalVideo.style.display = "none";
-             au.pause();
+             vid.pause();
              }
           }
 

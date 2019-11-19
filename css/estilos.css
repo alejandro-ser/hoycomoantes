@@ -321,6 +321,7 @@ p {
   padding: 0;
 }
 
+.description__content .download,
 .description__side .download {
   background-color: rgb(236,237,239);
   position: relative;
@@ -704,7 +705,7 @@ p {
     R E S P O N S I V E
   ===============================*/
 
-@media (min-width: 320px) {
+/* @media (min-width: 320px) {
 
   .index__content h1 {
     font-size: 2.6rem;
@@ -718,20 +719,121 @@ p {
     padding: 0 30px;
   }
 
+  .description__content {
+    padding-right: 15px;
+  }
 
-}
 
-@media (min-width: 400px) {
-
-}
+} */
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
+@media screen and (max-width: 768px) and (min-width: 320px) {
+  body {
+    overflow-y: auto;
+  }
+
+  /* Menu */
+
+  .btn-menu {
+    top: 6vh;
+  }
+
+  /* INTRO */
+
+  .index__content h1 {
+    font-size: 2.6rem;
+  }
+
+  .index__content .btn-main {
+    font-size: 1.2rem;
+  }
+
+  .index__content .btn-main span {
+    padding: 0 30px;
+  }
+
+  /* Descripcion */
+
+  .description__content {
+    padding-top: 90px;
+    padding-right: 15px;
+    margin: 0 15px;
+  }
+
+  .description .description__title {
+    font-size: 2.1rem;
+    text-align: center;
+  }
+
+  .description__content p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    text-align: justify;
+    line-height: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .description__content .btn-main, .sobre_mi__content .btn-main, .referencias__content .btn-main {
+    font-size: .9rem;
+  }
+
+  .description__content .download h3 {
+    font-size: 1.2em;
+    margin: 20px 0;
+  }
+
+  .description__content .download a:visited,
+  .description__content .download a:hover,
+  .description__content .download a:active {
+    color: #000;
+  }
+
+  /* Eventos */
+
+  .eventos__item p {
+    padding: .5rem;
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+
+  /* Contacto */
+
+  .contacto__links h1 {
+    font-size: 2.2rem;
+  }
+
+  .contacto__links li h1 {
+    font-size: 1.6rem;
+  }
+
+  .contacto__links li a {
+    font-size: .9rem;
+  }
+
+  /* Sobre mi */
+
+  .sobre_mi__top,
+  .sobre_mi__bottom {
+    height: 5vh;
+  }
+
+  .sobre_mi__content {
+    padding-top: 20px;
+  }
+
+  .sobre_mi__content h2 {
+    font-size: 1.8rem;
+  }
+
+  .sobre_mi__content p {
+    font-size: .9rem;
+    line-height: 1.1rem;
+  }
 
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media screen and (max-width: 992px) and (min-width: 768px) {
 
   .index__content h1 {
     font-size: 3.6rem;
@@ -745,10 +847,86 @@ p {
     padding: 0 40px;
   }
 
+  /* Descripcion */
+
+  .description__content {
+    padding-right: 5rem;
+  }
+
+  .description .description__title {
+    font-size: 3.2rem;
+    text-align: center;
+  }
+
+  .description__content p {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    margin-bottom: .8rem;
+  }
+
+  .description__content .btn-main,
+  .sobre_mi__content .btn-main,
+  .referencias__content .btn-main {
+    font-size: 1.1rem;
+  }
+
+  .description__side {
+    background-size: contain;
+  }
+
+  .description__side h3 {
+    font-size: 1.5rem;
+  }
+
+  /* Eventos */
+
+  .eventos__item p {
+    background-color:
+    #fff;
+    padding: .8rem;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    text-align: left;
+  }
+
+  /* Contacto */
+
+  .contacto__links h1 {
+    font-size: 2.5rem;
+  }
+
+  .contacto__links li h1 {
+    font-size: 1.8rem;
+  }
+
+  .contacto__links li a {
+    font-size: 1rem;
+  }
+
+  /* Sobre mi */
+
+  .sobre_mi__content {
+    padding-top: 0;
+  }
+
+  .sobre_mi__content h2 {
+    font-size: 2rem;
+  }
+
+  .sobre_mi__content p {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  /* Menu */
+  .btn-menu {
+    top: 10vh;
+  }
+
   .index__content h1 {
     font-size: 65px;
   }
@@ -759,6 +937,23 @@ p {
 
   .index__content .btn-main span {
     padding: 0 60px;
+  }
+
+  /* Descripcion */
+
+  .description__content {
+    padding-right: 10rem;
+  }
+
+  .description .description__title {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .description__content .btn-main,
+  .sobre_mi__content .btn-main,
+  .referencias__content .btn-main {
+    font-size: 1.1rem;
   }
 }
 
