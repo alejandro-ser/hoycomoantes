@@ -18,26 +18,472 @@
   <!-- <button class="btn-main btn-sound" type="button" name="button"></button> -->
 
   <!-- Contenedor -->
-  <div class="referencias container-fluid h-100">
-    <div class="row align-items-center h-100">
-      <div class="referencias__left col-2"></div>
-      <div class="referencias__content col-8 h-100 text-center text-justify">
-        <div class="row justify-content-center h-100">
-          <div class="col-4">
-            <div class="row align-items-center h-100">
-              <div class="referencias__item col-12 mb-5">
-                <h2 class="referencias__title mb-4">LECTURAS</h2>
-                <a href="referencias_lecturas.html" class="btn-main mt-3">VER</a>
+  <div class="referencias container">
+    <div class="row mt-5 d-none d-md-flex d-lg-flex d-xl-flex">
+      <div class="col-3">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link my-1 mx-5 active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">SONIDO</a>
+          <a class="nav-link my-1 mx-5" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">VÍDEO</a>
+          <a class="nav-link my-1 mx-5" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">ARCHIVO</a>
+          <a class="nav-link my-1 mx-5" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">OTROS</a>
+        </div>
+      </div>
+      <div class="col-sm-8 col-md-8 col-lg-9 col-xl-9">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <div class="jumbotron py-2">
+              <ul class="px-0">
+                <li>
+                  <a href="https://rva.fonotecanacional.gob.mx/fonoteca_itinerante/voces.html" target="_blank" class="">
+                    Joyas de la Fonoteca Nacional Mexicana
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.altamiracave.com/dickh.htm" target="_blank" class="">
+                    LOS ORIGENES DE LA POESIA SONORA. De la armonía imitativa a la glosolalia, Por Dick Higgins
+                  </a>
+                </li>
+                <li>
+                  <a href="https://monoskop.org/images/0/09/Chion_Michel_La_audiovision_Introduccion_a_un_analisis_conjunto_de_la_imagen_y_el_sonido.pdf" target="_blank" class="">
+                    La audiovisión, MICHEL CHION
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.vice.com/es_co/article/ez9qaj/budlab-quin-es-robert-moog" target="_blank" class="">
+                    ¿Quién es Robert Moog? Por Thump Colombia
+                  </a>
+                </li>
+                <li>
+                  <a href="https://soundcloud.com/pan_hq/sets/jenna-sutela-nimiia-vibie-pan-104?fbclid=IwAR2u_CJdUaihbcz1V4_kCYzO4bQ-DOA5eAU3mKjTRyvEgY0Vd0LnXy_zqdw" target="_blank" class="">
+                    Jenna Sutela - Nimiia vibié  
+                  </a>
+                </li>
+                <li>
+                  <a href="https://forosonodoc.org" target="_blank" class="">
+                    Foro de Documental Sonoro en Español 
+                  </a>
+                </li>
+                <li>
+                  <a href="https://audiomidilab.com/que-es-la-musica-acusmatica/" target="_blank" class="">
+                    ¿Qué es la Música Acusmática?  Por Jorge Sad
+                  </a>
+                </li>
+                <li>
+                  <a href="https://mexicana.cultura.gob.mx/es/repositorio/detalle?id=_suri:CENART:TransObject:5bce56b07a8a0222ef15d5e6" target="_blank" class="">
+                    Conferencia magistral: Murray Schafer paisaje sonoro
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.udea.edu.co/wps/wcm/connect/udea/a8f1361d-b24d-4e94-a47a-ffc8ce83c080/patrimonioSonoro.pdf?MOD=AJPERES&CVID=kQ0qfP4" target="_blank" class="">
+                    Organización del texto sobre normatividad internacional y nacional referente a patrimonio documental sonoro
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.diariodexalapa.com.mx/cultura/ciencias-de-la-computacion-aplicables-a-los-paisajes-sonoros-4222342.html?fbclid=IwAR2nkIHDs0dGywa5ynNZ39C3gZ5c-N6dwCKsl2RFD1y9A0aSA1vjb00Yh7E" target="_blank" class="">
+                    Ciencias de la computación aplicables a los paisajes sonoros, Por Oscar H. Marín Gómez e Ian MacGregor Fors
+                  </a>
+                </li>
+                <li>
+                  <a href="https://soundcloud.com/dirtysalsa/estou-bem-longe" target="_blank" class="">
+                    Estou bem longe, Dirty Salsa
+                  </a>
+                </li>
+                <li>
+                  <a href="https://soundcloud.com/karla-lechuga/sets/documentales-sonoros" target="_blank" class="">
+                    Documentales sonoros, Karla Lechuga
+                  </a>
+                </li>
+                <li>
+                  <a href="https://soundcloud.com/comeme/ladrones-09" target="_blank" class="">
+                    Radio cómeme-Ladrones, Alejandro Paz
+                  </a>
+                </li>
+                <li>
+                  <a href="https://soundcloud.com/clara-uno/reggaetoneras-de-estribillo-bzh2018" target="_blank" class="">
+                    Reggaetoneras de estribillo, Clara!
+                  </a>
+                </li>
+                <li>
+                  <a href="https://soundcloud.com/h-e-x-o-r-c-i-s-m-o-s/ecocidio-feat-vrtex" target="_blank" class="">
+                    Ecocidio, VRTEX
+                  </a>
+                </li>
+                <li>
+                  <a href="https://soundcloud.com/lulu2105" target="_blank" class="">
+                    Lulu
+                  </a>
+                </li>
+                <li>
+                  <a href="https://soundcloud.com/aeg-egeg/likes" target="_blank" class="">
+                    AIXA
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+            <div class="jumbotron py-2">
+              <ul class="px-0">
+                <li>
+                  <a href="http://estructurassensitivas.blogspot.com/2011/01/tango-zbig-rybczynski-1980.html" target="_blank" class="">
+                    Tango - Zbig Rybczynski - 1980, revista Fisuras nº16
+                  </a>
+                </li>
+                <li>
+                  <a href="http://socks-studio.com/2013/01/13/tango-by-zbigniew-rybczynski-1980/" target="_blank" class="">
+                    Tango, by Zbigniew Rybczyński (1980), Por Fosco Lucarelli 
+                  </a>
+                </li>
+                <li>
+                  <a href="http://film-makerscoop.com/catalogue/silvestre-byron-29-segundos-de-cine-absoluto" target="_blank" class="">
+                    The film-Makers Coop
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.untref.edu.ar/cibertronic/lo_trans/nota03/index.html" target="_blank" class="">
+                    Cine underground, cine clandestino, cine experimental: hacia una definición POR ANDRES DENEGRI
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.candelavizcaino.es/literatura/poesia-visual.html" target="_blank" class="">
+                    ¿Qué es la poesía visual? Un intento de definición y un poco de historia, Por Candela Vizcaíno
+                  </a>
+                </li>
+                <li>
+                  <a href="https://textosblackmaria.blogspot.com" target="_blank" class="">
+                    CUANDO TODO COMENZÓ YA ERA EL FIN, Por Augusto Bernal
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.nfb.ca/film/listen/" target="_blank" class="">
+                    Listen, por David New
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.acuartaparede.com/es/portopostdoc-2016/" target="_blank" class="">
+                    UN FESTIVAL SENSORIAL, Por Ivan Villarmea
+                  </a>
+                </li>
+              </ul>
+              <!-- Video integrado -->
+              <div class="text-center">
+                <h4 clas></h4>
+                <iframe width="660" height="415" src="https://www.youtube.com/embed/videoseries?list=PLO1Zl247CYzgeD7KMIiKsVKiRXiOX2oQk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
-              <div class="referencias__item col-12 mt-5">
-                <h2 class="referencias__title mb-4">VÍDEOS</h2>
-                <a href="referencias_videos.html" class="btn-main mt-3">VER</a>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+            <div class="jumbotron py-2">
+              <ul class="px-0">
+                <li>
+                  <a href="http://www.mincultura.gov.co/SiteAssets/Comunicaciones/Criterios%20de%20conservación%20Archivos%20Audiovisuales%20y%20Sonoros.pdf" target="_blank" class="">
+                    LINEAMIENTOS PARA LA CONSERVACIÓN Y PRESERVACIÓN DE ARCHIVOS AUDIOVISUALES Y SONOROS
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.alquiblaweb.com/2012/06/09/el-concepto-de-archivo-y-su-origen/" target="_blank" class="">
+                    El concepto de archivo y su origen
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.casae.org/docs/Norma_mexicana_catalogacion_archivos_sonoros.pdf" target="_blank" class="">
+                    Norma Mexicana de Catalogación de Documentos Fonográficos
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.mincultura.gov.co/areas/cinematografia/publicaciones/Documents/Principos%20y%20Técnicas%20en%20un%20Archivo%20Audiovisual.pdf" target="_blank" class="">
+                    Principios y técnicas en un archivo audiovisual
+                  </a>
+                </li>
+                <li>
+                  <a href="https://colombiadigital.net/actualidad/experiencias/item/4185-fonoteca-mucho-más-que-archivos.html" target="_blank" class="">
+                    La memoria sonora del país en cápsulas digitales.
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+            <div class="jumbotron py-2">
+              <ul class="px-0">
+                <li>
+                  <a href="http://www.paulasibilia.com/entrevistas" target="_blank" class="">
+                    Paula Sibilia
+                  </a>
+                </li>
+                <li>
+                  <a href="https://autoresvarios.wordpress.com/2016/06/25/sarah-pink-etnografia-digital-y-sensorial/" target="_blank" class="">
+                    Sara Pink. Etnografía digital y sensorial.
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.jornada.com.mx/2016/01/07/ls-central.html" target="_blank" class="">
+                    Extimidad Exhibir lo íntimo
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.teleportacia.org/war/wara.htm" target="_blank" class="">
+                    Teleportacia, NetArt
+                  </a>
+                </li>
+                <li>
+                  <a href="https://lafelguera.net/la-editorial/" target="_blank" class="">
+                    La Felguera, editorial
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row d-block d-sm-none my-5 pt-5">
+      <div class="col-12">
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0 text-center">
+                <button class="btn btn-link text-dark" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  SONIDO
+                </button>
+              </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <ul class="px-0">
+                  <li>
+                    <a href="https://rva.fonotecanacional.gob.mx/fonoteca_itinerante/voces.html" target="_blank" class="text-dark">
+                      Joyas de la Fonoteca Nacional Mexicana
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.altamiracave.com/dickh.htm" target="_blank" class="text-dark">
+                      LOS ORIGENES DE LA POESIA SONORA. De la armonía imitativa a la glosolalia, Por Dick Higgins
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://monoskop.org/images/0/09/Chion_Michel_La_audiovision_Introduccion_a_un_analisis_conjunto_de_la_imagen_y_el_sonido.pdf" target="_blank" class="text-dark">
+                      La audiovisión, MICHEL CHION
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.vice.com/es_co/article/ez9qaj/budlab-quin-es-robert-moog" target="_blank" class="text-dark">
+                      ¿Quién es Robert Moog? Por Thump Colombia
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://soundcloud.com/pan_hq/sets/jenna-sutela-nimiia-vibie-pan-104?fbclid=IwAR2u_CJdUaihbcz1V4_kCYzO4bQ-DOA5eAU3mKjTRyvEgY0Vd0LnXy_zqdw" target="_blank" class="text-dark">
+                      Jenna Sutela - Nimiia vibié  
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://forosonodoc.org" target="_blank" class="text-dark">
+                      Foro de Documental Sonoro en Español 
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://audiomidilab.com/que-es-la-musica-acusmatica/" target="_blank" class="text-dark">
+                      ¿Qué es la Música Acusmática?  Por Jorge Sad
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://mexicana.cultura.gob.mx/es/repositorio/detalle?id=_suri:CENART:TransObject:5bce56b07a8a0222ef15d5e6" target="_blank" class="text-dark">
+                      Conferencia magistral: Murray Schafer paisaje sonoro
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.udea.edu.co/wps/wcm/connect/udea/a8f1361d-b24d-4e94-a47a-ffc8ce83c080/patrimonioSonoro.pdf?MOD=AJPERES&CVID=kQ0qfP4" target="_blank" class="text-dark">
+                      Organización del texto sobre normatividad internacional y nacional referente a patrimonio documental sonoro
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.diariodexalapa.com.mx/cultura/ciencias-de-la-computacion-aplicables-a-los-paisajes-sonoros-4222342.html?fbclid=IwAR2nkIHDs0dGywa5ynNZ39C3gZ5c-N6dwCKsl2RFD1y9A0aSA1vjb00Yh7E" target="_blank" class="text-dark">
+                      Ciencias de la computación aplicables a los paisajes sonoros, Por Oscar H. Marín Gómez e Ian MacGregor Fors
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://soundcloud.com/dirtysalsa/estou-bem-longe" target="_blank" class="text-dark">
+                      Estou bem longe, Dirty Salsa
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://soundcloud.com/karla-lechuga/sets/documentales-sonoros" target="_blank" class="text-dark">
+                      Documentales sonoros, Karla Lechuga
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://soundcloud.com/comeme/ladrones-09" target="_blank" class="text-dark">
+                      Radio cómeme-Ladrones, Alejandro Paz
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://soundcloud.com/clara-uno/reggaetoneras-de-estribillo-bzh2018" target="_blank" class="text-dark">
+                      Reggaetoneras de estribillo, Clara!
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://soundcloud.com/h-e-x-o-r-c-i-s-m-o-s/ecocidio-feat-vrtex" target="_blank" class="text-dark">
+                      Ecocidio, VRTEX
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://soundcloud.com/lulu2105" target="_blank" class="text-dark">
+                      Lulu
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://soundcloud.com/aeg-egeg/likes" target="_blank" class="text-dark">
+                      AIXA
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0 text-center">
+                <button class="btn btn-link text-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  VÍDEO
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                <ul class="px-0">
+                  <li>
+                    <a href="http://estructurassensitivas.blogspot.com/2011/01/tango-zbig-rybczynski-1980.html" target="_blank" class="text-dark">
+                      Tango - Zbig Rybczynski - 1980, revista Fisuras nº16
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://socks-studio.com/2013/01/13/tango-by-zbigniew-rybczynski-1980/" target="_blank" class="text-dark">
+                      Tango, by Zbigniew Rybczyński (1980), Por Fosco Lucarelli 
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://film-makerscoop.com/catalogue/silvestre-byron-29-segundos-de-cine-absoluto" target="_blank" class="text-dark">
+                      The film-Makers Coop
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.untref.edu.ar/cibertronic/lo_trans/nota03/index.html" target="_blank" class="text-dark">
+                      Cine underground, cine clandestino, cine experimental: hacia una definición POR ANDRES DENEGRI
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.candelavizcaino.es/literatura/poesia-visual.html" target="_blank" class="text-dark">
+                      ¿Qué es la poesía visual? Un intento de definición y un poco de historia, Por Candela Vizcaíno
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://textosblackmaria.blogspot.com" target="_blank" class="text-dark">
+                      CUANDO TODO COMENZÓ YA ERA EL FIN, Por Augusto Bernal
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.nfb.ca/film/listen/" target="_blank" class="text-dark">
+                      Listen, por David New
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.acuartaparede.com/es/portopostdoc-2016/" target="_blank" class="text-dark">
+                      UN FESTIVAL SENSORIAL, Por Ivan Villarmea
+                    </a>
+                  </li>
+                </ul>
+                <!-- Video integrado -->
+                <div class="text-center">
+                  <h4 clas></h4>
+                  <iframe width="auto" height="auto" src="https://www.youtube.com/embed/videoseries?list=PLO1Zl247CYzgeD7KMIiKsVKiRXiOX2oQk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0 text-center">
+                <button class="btn btn-link text-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  ARCHIVO
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                <ul class="px-0">
+                  <li>
+                    <a href="http://www.mincultura.gov.co/SiteAssets/Comunicaciones/Criterios%20de%20conservación%20Archivos%20Audiovisuales%20y%20Sonoros.pdf" target="_blank" class="text-dark">
+                      LINEAMIENTOS PARA LA CONSERVACIÓN Y PRESERVACIÓN DE ARCHIVOS AUDIOVISUALES Y SONOROS
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.alquiblaweb.com/2012/06/09/el-concepto-de-archivo-y-su-origen/" target="_blank" class="text-dark">
+                      El concepto de archivo y su origen
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.casae.org/docs/Norma_mexicana_catalogacion_archivos_sonoros.pdf" target="_blank" class="text-dark">
+                      Norma Mexicana de Catalogación de Documentos Fonográficos
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.mincultura.gov.co/areas/cinematografia/publicaciones/Documents/Principos%20y%20Técnicas%20en%20un%20Archivo%20Audiovisual.pdf" target="_blank" class="text-dark">
+                      Principios y técnicas en un archivo audiovisual
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://colombiadigital.net/actualidad/experiencias/item/4185-fonoteca-mucho-más-que-archivos.html" target="_blank" class="text-dark">
+                      La memoria sonora del país en cápsulas digitales.
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <h2 class="mb-0 text-center">
+                <button class="btn btn-link text-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                  OTROS
+                </button>
+              </h2>
+            </div>
+
+            <div id="collapseFour" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <ul class="px-0">
+                  <li>
+                    <a href="http://www.paulasibilia.com/entrevistas" target="_blank" class="text-dark">
+                      Paula Sibilia
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://autoresvarios.wordpress.com/2016/06/25/sarah-pink-etnografia-digital-y-sensorial/" target="_blank" class="text-dark">
+                      Sara Pink. Etnografía digital y sensorial.
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.jornada.com.mx/2016/01/07/ls-central.html" target="_blank" class="text-dark">
+                      Extimidad Exhibir lo íntimo
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.teleportacia.org/war/wara.htm" target="_blank" class="text-dark">
+                      Teleportacia, NetArt
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://lafelguera.net/la-editorial/" target="_blank" class="text-dark">
+                      La Felguera, editorial
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="referencias__right col-2"></div>
     </div>
   </div>
 
@@ -67,7 +513,11 @@
       </div>
     </div>
   </div>
+
   <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="js/main.js" charset="utf-8"></script>
 </body>
 </html>
