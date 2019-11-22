@@ -292,7 +292,8 @@ p {
 
 .description__content .btn-main,
 .sobre_mi__content .btn-main,
-.referencias__content .btn-main {
+.referencias__content .btn-main,
+.eventos .btn-main {
   font-size: 1.1rem;
   border-width: 1px;
   border-color: #000;
@@ -308,7 +309,8 @@ p {
 
 .description__content .btn-main:hover,
 .sobre_mi__content .btn-main:hover,
-.referencias__content .btn-main:hover {
+.referencias__content .btn-main:hover,
+.eventos .btn-main:hover {
   background-color: #000;
   color: #fff;
   border-color: #fff;
@@ -411,7 +413,7 @@ p {
 
 /* EVENTOS */
 .eventos {
-  padding-top: 6rem;
+  padding-top: 2rem;
 }
 
 .eventos__item {
@@ -448,6 +450,11 @@ p {
   font-size: 1rem;
   line-height: 1.4rem;
   text-align: left;
+  margin-bottom: .6rem;
+}
+
+.eventos__item p button.btn {
+  font-family: 'Josefin Slab', serif;
 }
 
 /* COLABOTADORES */
@@ -768,6 +775,10 @@ p {
   }
 
   /* Eventos */
+
+  .eventos {
+    padding-top: 6rem;
+  }
 
   .eventos__item p {
     padding: .5rem;
