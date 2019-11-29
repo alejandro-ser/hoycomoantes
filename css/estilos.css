@@ -1,28 +1,27 @@
 /*
-  Hoy como antes
+  E s t i l o s  G e n e r a l e s
+    H o y   c o m o   a n t e s
 */
 
-/*
-  Fonts
-*/
+/* FONTS */
 
-/* @font-face {
-  font-family: 'Josefin Slab', serif;
-  src: url("/fonts/JosefinSlab-Bold.ttf");
-  src: url("/fonts/JosefinSlab-Bold.ttf") format('truetype');
+/* latin */
+@font-face {
+  font-family: 'Josefin Slab';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Josefin Slab Bold'), local('JosefinSlab-Bold'), url(../fonts/Josefin_Slab/JosefinSlab-Bold.ttf) format('truetype');
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'), url(../fonts/Montserrat/Montserrat-Bold.ttf) format('truetype');
 }
 
-@font-face {
-  font-family: 'Montserrat', sans-serif;
-  src: url("/fonnts/Montserrat-Bold.ttf");
-  src: url("/fonnts/Montserrat-Bold.ttf") format('truetype');
-}
-
-@font-face {
-  font-family: 'Open Sans', sans-serif;
-  src: url("/fonts/OpenSans-Regular.ttf");
-  src: url("/fonts/OpenSans-Regular.ttf") format('truetype');
-} */
 
 /* Basics */
 body{
