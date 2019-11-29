@@ -829,6 +829,28 @@ p {
     line-height: 1.1rem;
   }
 
+  /* P E L I C U L A */
+
+    .menu__list .card {
+        width: 80%;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: none;
+        border-radius: .20rem;
+        max-height: 50px;
+        cursor: pointer;
+    }
+
+    .menu__list .card-img {
+        height: 50px;
+        object-fit: cover;
+    }
+
+    .menu__list .card-img-overlay {
+        padding: 1rem;
+    }
+
 }
 
 /* Medium devices (tablets, 768px and up) */

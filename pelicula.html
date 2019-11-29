@@ -18,7 +18,8 @@
 
     <!-- Contenedor -->
     <div class="pelicula container-fluid h-100">
-      <div class="row justify-content-center align-items-center h-100">
+      <div class="row justify-content-center align-items-center h-100 d-none d-md-flex d-lg-flex d-xl-flex">
+        <!-- Menu de audios -->
         <div class="pelicula__content col-2">
           <!-- PLAYER -->
           <div id='audioplayermain'>
@@ -38,7 +39,7 @@
             </audio>
           </div>
 
-          <!-- Menu de audios -->
+          <!-- Botones audios -->
           <ul class="menu__list">
             <li><button type="button" class="btn-main deDias"
                         onclick="setChapter('deDias')"
@@ -201,9 +202,97 @@
           </div>
         </div>
       </div>
+
+      <!-- Menu para moviles -->
+      <div class="row justify-content-center align-items-center h-100 pt-2 d-block d-sm-none">
+        <div class="col">
+          <ul class="menu__list">
+            <li>
+              <div class="card text-white" onclick="triggerVideo('deDias')">
+                <img src="img/de_dias.jpg" class="card-img" alt="De días">
+                <div class="card-img-overlay">
+                  <h5 class="card-title">DE DÍAS</h5>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card text-white" onclick="triggerVideo('aNadie')">
+                <img src="img/a_nadie.jpg" class="card-img" alt="De días">
+                <div class="card-img-overlay">
+                  <h5 class="card-title">A NADIE</h5>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card text-white" onclick="triggerVideo('porFavor')">
+                <img src="img/por_favor.jpg" class="card-img" alt="De días">
+                <div class="card-img-overlay">
+                  <h5 class="card-title">POR FAVOR</h5>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card text-white" onclick="triggerVideo('amanAma')">
+                <img src="img/aman_ama.jpg" class="card-img" alt="De días">
+                <div class="card-img-overlay">
+                  <h5 class="card-title">AMAN AMA</h5>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card text-white" onclick="triggerVideo('si')">
+                <img src="img/si.jpg" class="card-img" alt="De días">
+                <div class="card-img-overlay">
+                  <h5 class="card-title">¿SÍ?</h5>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card text-white" onclick="triggerVideo('cosasCasos')">
+                <img src="img/cosas_casos.jpg" class="card-img" alt="De días">
+                <div class="card-img-overlay">
+                  <h5 class="card-title">COSAS CASOS</h5>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card text-white" onclick="triggerVideo('dosDisparos')">
+                <img src="img/dos_disparos.jpg" class="card-img" alt="De días">
+                <div class="card-img-overlay">
+                  <h5 class="card-title">DOS DISPAROS</h5>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card text-white" onclick="triggerVideo('hoyComoAntes')">
+                <img src="img/hoy_como_antes.jpg" class="card-img" alt="De días">
+                <div class="card-img-overlay">
+                  <h5 class="card-title">HOY COMO ANTES</h5>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card text-white" onclick="triggerVideo('no')">
+                <img src="img/no.jpg" class="card-img" alt="De días">
+                <div class="card-img-overlay">
+                  <h5 class="card-title">NO</h5>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="card text-white" onclick="triggerVideo('noMeAcuerdo')">
+                <img src="img/no_me_acuerdo.jpg" class="card-img" alt="De días">
+                <div class="card-img-overlay">
+                  <h5 class="card-title">NO ME ACUERDO</h5>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-    <!-- Modal menú -->
+    <!-- Modal reproductor -->
     <div id="modalVideo" class="menu modal-video animated">
       <div class="modal-video__content container h-100">
         <div class="row justify-content-center h-100">
@@ -220,6 +309,9 @@
             <div class="modal-video__footer">
               <h3 id="videoTitle" class="text-uppercase"></h3>
             </div>
+            <!-- <div class="text-white">
+              <p><i>De días</i> se construye de la voz que nombra diferentes tiempos donde los cambios de espacio evidencian el movimiento y los recorridos que se van a dar en el transcurso de la narración.</p>
+            </div> -->
           </div>
         </div>
       </div>
